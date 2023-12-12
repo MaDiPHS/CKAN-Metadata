@@ -140,7 +140,7 @@ dataset_fields:
   form_placeholder: joe@example.com
   display_property: dc:creator
   display_snippet: email.html
-    display_email_name_field: author
+  display_email_name_field: author
 
 - field_name: maintainer
   label: Maintainer
