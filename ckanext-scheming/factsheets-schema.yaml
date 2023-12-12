@@ -1,3 +1,19 @@
+#    The schema used for knowledge product datasets, e.g. factsheets
+#    Copyright (C) 2023  Tor-Einar Skog, NIBIO
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 scheming_version: 2
 dataset_type: plant-health-knowledge-product
 about: Extends the default CKAN dataset schema with essential meta data for plant health knowledge products such as fact sheets
@@ -45,7 +61,7 @@ dataset_fields:
 # Vocabulary: EPPO codes (https://gd.eppo.int)
 - field_name: crop
   label: Crop
-  preset: select
+  preset: multiple_select
   choices:
     - value: ZEAMX
       label: Maize
@@ -60,12 +76,11 @@ dataset_fields:
     - value: MUBPA
       label: Banana
   required: true
-  multiple: true
 
 # Vocabulary: Using ISO 693-2 (https://en.wikipedia.org/wiki/ISO_639-2)
 - field_name: language
   label: Language
-  preset: select
+  preset: multiple_select
   choices:
     - value: eng
       label: English
