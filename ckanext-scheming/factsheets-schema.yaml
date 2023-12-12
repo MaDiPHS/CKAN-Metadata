@@ -41,7 +41,6 @@ dataset_fields:
     - value: GNORAB
       label: Tuta absoluta
   required: true
-  multiple: true
 
 # Vocabulary: EPPO codes (https://gd.eppo.int)
 - field_name: crop
