@@ -24,7 +24,7 @@ dataset_fields:
 # Vocabulary: EPPO codes (https://gd.eppo.int)
 - field_name: pest
   label: Pest
-  preset: select
+  preset: multiple_select
   choices:
     - value: HELIAR
       label: African Bollworm
@@ -42,7 +42,6 @@ dataset_fields:
       label: Tuta absoluta
   required: true
   multiple: true
-  form_placeholder: Please select pest(s)
 
 # Vocabulary: EPPO codes (https://gd.eppo.int)
 - field_name: crop
@@ -63,7 +62,6 @@ dataset_fields:
       label: Banana
   required: true
   multiple: true
-  form_placeholder: Please select crop(s)
 
 # Vocabulary: Using ISO 693-2 (https://en.wikipedia.org/wiki/ISO_639-2)
 - field_name: language
@@ -81,7 +79,6 @@ dataset_fields:
     - value: deu
       label: German
   multiple: true
-  form_placeholder: Please select language(s)
 
 - field_name: creation_date
   label: When the knowledge product was created
@@ -106,12 +103,10 @@ dataset_fields:
       label: Annually
     - value: infrequently
       label: Infrequently/unscheduled
-  form_placeholder: Please select update frequency
 
 - field_name: most_recent_update
   label: When the product was last updated
   preset: date
-  form_placeholder: Please select a date
 
 - field_name: tag_string
   label: Tags
