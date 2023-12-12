@@ -105,7 +105,7 @@ dataset_fields:
     - value: annually
       label: Annually
     - value: infrequently
-             Infrequently/unscheduled
+      label: Infrequently/unscheduled
   form_placeholder: Please select update frequency
 
 - field_name: most_recent_update
