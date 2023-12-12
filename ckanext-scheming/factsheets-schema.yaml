@@ -1,6 +1,6 @@
 scheming_version: 2
-dataset_type: dataset
-about: A reimplementation of the default CKAN dataset schema
+dataset_type: plant-health-knowledge-product
+about: Extends the default CKAN dataset schema with essential meta data for plant health knowledge products such as fact sheets
 about_url: http://github.com/ckan/ckanext-scheming
 
 
@@ -21,6 +21,7 @@ dataset_fields:
   form_snippet: markdown.html
   form_placeholder: eg. Some useful notes about the data
 
+# Vocabulary: EPPO codes (https://gd.eppo.int)
 - field_name: pest
   label: Pest
   preset: select
@@ -37,32 +38,77 @@ dataset_fields:
       label: Cutworm
     - value: BUSSFU
       label: Maize Stalk Borer
+    - value: GNORAB
+      label: Tuta absoluta
   required: true
   multiple: true
 
+# Vocabulary: EPPO codes (https://gd.eppo.int)
 - field_name: crop
   label: Crop
   preset: select
   choices:
-    - value: maize
+    - value: ZEAMX
       label: Maize
-         - value: tomato
+    - value: LYPES
       label: Tomato
-    - value: groundnut
+    - value: ARHHY
       label: Groundnut
-    - value: soyabean
-      label: Soyabean
-    - value: cassava
+    - value: GLXMA
+      label: Soybean
+    - value: MANES
       label: Cassava
-    - value: banana
+    - value: MUBPA
       label: Banana
   required: true
 
+# Vocabulary: Using ISO 693-2 (https://en.wikipedia.org/wiki/ISO_639-2)
+- field_name: language
+  label: Language
+  preset: select
+  choices:
+    - value: eng
+      label: English
+    - value: nya
+      label: Chichewa
+    - value: swa
+      label: Swahili
+    - value: fra
+      label: French
+    - value: deu
+      label: German
+
+- field_name: creation_date
+  label: When was the knowledge product created?
+  preset: date
+
+- field_name: update_frequency
+  label: How often is the knowledge product updated?
+  preset: select
+  choices:
+    - value: daily
+      label: Daily
+    - value: weekly
+      label: Weekly
+    - value: monthly
+      label: Monthly
+    - value: quarterly
+      label: Quarterly
+    - value: semi-annually
+      label: Semi-annually
+    - value: annually
+      label: Annually
+    - value: infrequently
+             Infrequently/unscheduled
+
+- field_name: most_recent_update
+  label: When was the product last updated?
+  preset: date
 
 - field_name: tag_string
   label: Tags
   preset: tag_string_autocomplete
-  form_placeholder: eg. economy, mental health, government
+  form_placeholder: eg. agriculture, pesticide, IPM
 
 - field_name: license_id
   label: License
