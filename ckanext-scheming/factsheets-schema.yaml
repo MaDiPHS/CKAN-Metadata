@@ -54,8 +54,6 @@ dataset_fields:
       label: Cutworm
     - value: BUSSFU
       label: Maize Stalk Borer
-    - value: GNORAB
-      label: Tuta absoluta
   required: true
 
 # Vocabulary: EPPO codes (https://gd.eppo.int)
