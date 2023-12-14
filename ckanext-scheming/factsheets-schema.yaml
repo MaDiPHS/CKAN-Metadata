@@ -54,7 +54,7 @@ dataset_fields:
       label: Cutworm
     - value: BUSSFU
       label: Maize Stalk Borer
-    - value: GNORAB
+    - value: GNORAB2
       label: Tuta absoluta
   required: true
 
