@@ -42,19 +42,19 @@ dataset_fields:
   label: Pest
   preset: multiple_select
   choices:
-    - value: HELIAR
+    - value: https://gd.eppo.int/taxon/HELIAR
       label: African Bollworm
-    - value: MONOSE
+    - value: https://gd.eppo.int/taxon/MONOSE
       label: Cassava Green Mite
-    - value: PHAKIS
+    - value: https://gd.eppo.int/taxon/PHAKIS
       label: Soybean Rust
-    - value: SPFRUG
+    - value: http://aims.fao.org/aos/agrovoc/c_25452
       label: Fall Armyworm
-    - value: SPODLI
+    - value: https://gd.eppo.int/taxon/SPODLI
       label: Cutworm
-    - value: BUSSFU
+    - value: https://gd.eppo.int/taxon/BUSSFU
       label: Maize Stalk Borer
-    - value: GNORAB
+    - value: http://aims.fao.org/aos/agrovoc/c_e844dfc3
       label: Tuta absoluta
   required: true
 
@@ -63,7 +63,7 @@ dataset_fields:
   label: Crop
   preset: multiple_select
   choices:
-    - value: ZEAMX
+    - value: http://aims.fao.org/aos/agrovoc/c_12332
       label: Maize
     - value: LYPES
       label: Tomato
@@ -76,6 +76,10 @@ dataset_fields:
     - value: MUBPA
       label: Banana
   required: true
+
+- field_name: spatial
+  label: Spatial information (GeoJson)
+  preset: json_object
 
 # Vocabulary: Using ISO 693-2 (https://en.wikipedia.org/wiki/ISO_639-2)
 - field_name: language
