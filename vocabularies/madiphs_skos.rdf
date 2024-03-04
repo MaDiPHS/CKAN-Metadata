@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://voc.madiphs.org#"
+	xmlns:grddl="http://www.w3.org/2003/g/data-view#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:schema="http://topbraid.org/schema/">
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#macrogeoregions">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="en">UN Macro-Geographic Regions</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">The continent comprising the second largest landmass and population, known for its diverse cultures and languages.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:topConceptOf rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Africa</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Afrique</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">002</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#019">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">The combined continental landmass of North America and South America.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:topConceptOf rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Americas</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Amériques</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">019</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#010">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">The southernmost continent, containing the geographic South Pole, largely covered by ice.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:topConceptOf rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Antarctica</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Antarctique</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">010</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#142">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">The largest and most populous continent, located primarily in the Eastern and Northern Hemispheres.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:topConceptOf rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Asia</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Asie</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">142</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#150">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A continent comprising the westernmost part of Eurasia, known for its historical and cultural heritage.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:topConceptOf rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Europe</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Europe</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">150</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#009">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A geographic region that includes Australasia, Melanesia, Micronesia, and Polynesia spanning the eastern and western hemispheres.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:topConceptOf rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Oceania</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Océanie</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">009</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#015">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A subregion of Africa encompassing the northernmost countries on the continent.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Northern Africa</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Afrique du Nord</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">015</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#002"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#014">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A region of Africa that includes countries located around the Great Lakes region and the Horn of Africa.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Eastern Africa</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Afrique de l'Est</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">014</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#002"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#017">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A central subregion of Africa, which includes countries like Angola, Cameroon, and the Democratic Republic of the Congo.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Middle Africa</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Afrique centrale</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">017</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#002"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#018">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">The southernmost region of the African continent, which includes nations like South Africa, Namibia, and Botswana.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Southern Africa</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Afrique australe</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">018</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#002"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#011">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A region of Africa bounded by the Atlantic Ocean to the west, and the countries it includes range from Senegal to Nigeria.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Western Africa</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Afrique de l'Ouest</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">011</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#002"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#029">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A region comprising the Caribbean Sea, its islands, and the surrounding coasts, known for its vibrant culture and biodiversity.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Caribbean</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Caraïbes</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">029</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#019"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#013">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">The region connecting North and South America, consisting of countries between Mexico and Colombia.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Central America</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Amérique centrale</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">013</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#019"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">The southern continent of the Americas, rich in ecological diversity and cultural heritage.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">South America</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Amérique du Sud</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">005</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#019"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#021">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A region that includes the United States and Canada, characterized by diverse landscapes and a wide range of climates.</skos:definition>
+	<skos:definition xml:lang="en">A region that encompasses the northern part of the continent of America, including the United States and Canada.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Northern America</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Amérique du Nord</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">021</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#019"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#143">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A region of Asia extending from the Caspian Sea to the west to Mongolia in the east, traditionally known as the 'stans'.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Central Asia</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Asie centrale</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">143</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#142"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#035">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A region comprising countries south of China, east of India, west of New Guinea, and north of Australia.</skos:definition>
+	<skos:definition xml:lang="en">A subregion of Asia, located to the south of China and Japan, the east of India, and north of Australia, known for its tropical climates and vibrant cultures.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">South-eastern Asia</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Asie du Sud-Est</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">035</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#142"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#034">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A region that includes the Indian subcontinent and surrounding countries, characterized by its rich cultural and historical significance.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Southern Asia</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Asie du Sud</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">034</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#142"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#151">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A region of Europe that extends from the Baltic Sea to the Ural Mountains, known for its diverse geography and history.</skos:definition>
+	<skos:definition xml:lang="en">A region of Europe making up its eastern part, including nations like Poland, Hungary, and the Russian Federation.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Eastern Europe</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Europe de l'Est</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">151</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#150"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#039">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A region of Europe consisting of the countries on the Mediterranean Sea, the Italian and Balkan peninsulas, and the Iberian Peninsula.</skos:definition>
+	<skos:definition xml:lang="en">A region of Europe that encompasses the countries on the northern shores of the Mediterranean, including the Iberian, Italian, and Balkan peninsulas.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Southern Europe</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Europe du Sud</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">039</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#150"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#054">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A subregion of Oceania that includes the countries of Fiji, Papua New Guinea, Solomon Islands, and Vanuatu.</skos:definition>
+	<skos:definition xml:lang="en">A subregion of Oceania that includes nations like Fiji, Papua New Guinea, Solomon Islands, and Vanuatu.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Melanesia</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Mélanésie</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">054</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#009"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#145">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A region located in the western part of Asia, comprising countries like Saudi Arabia, Israel, and Turkey.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Western Asia</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Asie de l'Ouest</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">145</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#142"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#155">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A region comprising countries in the western part of Europe, such as France, Belgium, and the Netherlands.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Western Europe</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Europe de l'Ouest</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">155</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#150"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#154">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A region of Europe which includes the Scandinavian Peninsula, the Baltic states, and the British Isles.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Northern Europe</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Europe du Nord</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">154</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#150"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#053">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A region that includes the Commonwealth of Australia, as well as the islands of New Zealand.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Australia and New Zealand</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Australie et Nouvelle-Zélande</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">053</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#009"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#057">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A subregion of Oceania consisting of small islands located in the western Pacific Ocean.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Micronesia</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Micronésie</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">057</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#009"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://unstats.un.org/unsd/methodology/m49#061">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A subregion of Oceania made up of more than 1,000 islands scattered over the central and southern Pacific Ocean.</skos:definition>
+	<skos:inScheme rdf:resource="https://unstats.un.org/unsd/methodology/m49#macrogeoregions"/>
+	<skos:prefLabel xml:lang="en">Polynesia</skos:prefLabel>
+	<skos:altLabel xml:lang="fr">Polynésie</skos:altLabel>
+	<skos:notation rdf:datatype="https://unstats.un.org/unsd/methodology/m49">061</skos:notation>
+	<skos:broader rdf:resource="https://unstats.un.org/unsd/methodology/m49#009"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.org/ref/">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.org/ref/DataLicenseScheme">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<rdfs:label>Data License Scheme</rdfs:label>
+	<skos:definition>the set of licenses used for datasets published by MADiPHS</skos:definition>
+	<skos:hasTopConcept rdf:resource="https://data.nibio.org/ref/creative_commons"/>
+	<skos:hasTopConcept rdf:resource="https://data.nibio.org/ref/license_without_restrictions_on_derivatives"/>
+	<skos:hasTopConcept rdf:resource="https://data.nibio.org/ref/open_data_commons"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.org/ref/creative_commons">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:topConceptOf rdf:resource="https://data.nibio.org/ref/DataLicenseScheme"/>
+	<skos:prefLabel>Creative Commons</skos:prefLabel>
+	<skos:exactMatch rdf:resource="http://www.ebi.ac.uk/swo/license/SWO_1000001"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.org/ref/license_without_restrictions_on_derivatives">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:topConceptOf rdf:resource="https://data.nibio.org/ref/DataLicenseScheme"/>
+	<skos:prefLabel>License without restrictions on derivatives</skos:prefLabel>
+	<skos:exactMatch rdf:resource="http://www.ebi.ac.uk/swo/license/SWO_1000009"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.org/ref/open_data_commons">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:topConceptOf rdf:resource="https://data.nibio.org/ref/DataLicenseScheme"/>
+	<skos:prefLabel xml:lang="en">Open Data Commons</skos:prefLabel>
+	<skos:exactMatch rdf:resource="http://www.ebi.ac.uk/swo/license/SWO_1000095"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.org/ref/cc0_1.0">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<rdfs:label>CC0 1.0</rdfs:label>
+	<skos:definition>CC0 is a public domain dedication from Creative Commons. A work released under CC0 is dedicated to the public domain to the fullest extent permitted by law. If that is not possible for any reason, CC0 also provides a lax, permissive license as a fallback. Both public domain works and the lax license provided by CC0 are compatible with the GNU GPL.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.org/ref/DataLicenseScheme"/>
+	<skos:prefLabel xml:lang="en">CC0 1.0</skos:prefLabel>
+	<skos:broader rdf:resource="https://data.nibio.org/ref/creative_commons"/>
+	<skos:broader rdf:resource="https://data.nibio.org/ref/license_without_restrictions_on_derivatives"/>
+	<skos:exactMatch rdf:resource="http://www.ebi.ac.uk/swo/license/SWO_1000049"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.org/ref/cc_by_4.0">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<rdfs:label>CC BY 4.0</rdfs:label>
+	<skos:definition>The CC BY 4.0 license is a Creative Commons license. This is a non-copyleft free license that is good for art and entertainment works, and educational works. It is compatible with all versions of the GNU GPL; however, like all CC licenses, it should not be used on software. People are free to:
+Share — copy and redistribute the material in any medium or format;
+Adapt — remix, transform, and build upon the material for any purpose, even commercially.
+The licensor cannot revoke these freedoms as long as you follow the license terms.
+But they must conform to the following terms:
+Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.org/ref/DataLicenseScheme"/>
+	<skos:prefLabel xml:lang="en">CC BY 4.0</skos:prefLabel>
+	<skos:broader rdf:resource="https://data.nibio.org/ref/creative_commons"/>
+	<skos:exactMatch rdf:resource="http://www.ebi.ac.uk/swo/license/SWO_1000065"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.org/ref/cc_by-sa_4.0">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<rdfs:label>CC BY-SA 4.0</rdfs:label>
+	<skos:definition>CC BY-SA 4.0 is a copyleft free (free by the definition of the GNU Project) license which lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. The GNU Project recommend this license for art, entertainment and educational works, but also recommend that it is not used for software or documentation, since it is tricky as to how exactly this license is compatible with the GNU GPL.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.org/ref/DataLicenseScheme"/>
+	<skos:prefLabel xml:lang="en">CC BY-SA 4.0</skos:prefLabel>
+	<skos:broader rdf:resource="https://data.nibio.org/ref/creative_commons"/>
+	<skos:exactMatch rdf:resource="http://www.ebi.ac.uk/swo/license/SWO_1000094"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.org/ref/pddl_v1.0">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<rdfs:label>PDDL v1.0</rdfs:label>
+	<skos:definition>The ODC Public Domain Dedication and Licence is a document intended to allow you to freely share, modify, and use this work for any purpose and without any restrictions. This licence is intended for use on databases or their contents (“data”), either together or individually. The goal is to eliminate restrictions held by the original creator of the data and database on the use of it by others. Rightsholders will not be able to “dual license” their work by releasing the same work under different licences. This is because they have allowed anyone to use the work in whatever way they choose. Rightsholders therefore can’t re-license it under copyright or database rights on different terms because they have nothing left to license. </skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.org/ref/DataLicenseScheme"/>
+	<skos:prefLabel xml:lang="en">PDDL v1.0</skos:prefLabel>
+	<skos:broader rdf:resource="https://data.nibio.org/ref/license_without_restrictions_on_derivatives"/>
+	<skos:broader rdf:resource="https://data.nibio.org/ref/open_data_commons"/>
+	<skos:exactMatch rdf:resource="http://www.ebi.ac.uk/swo/license/SWO_1000101"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.org/ref/odbl_v1.0">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<rdfs:label>ODbL v1.0</rdfs:label>
+	<skos:definition>The ODbL v1.0 allows a user of the databases to share, create and adapt the database. You must attribute any public use of the database, or works produced from the database. For redistribution of the database or derivative works, you must make the use of this license clear to others, and you must keep intact any notices on the original database. If you publicly use any adapted version of this database, or works produced from an adapted database, you must also offer that adapted database under the ODbL. If you redistribute the database, or an adapted version of it, then you may use technological measures that restrict the work (such as DRM) as long as you also redistribute a version without such measures.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.org/ref/DataLicenseScheme"/>
+	<skos:prefLabel xml:lang="en">ODbL v1.0</skos:prefLabel>
+	<skos:broader rdf:resource="https://data.nibio.org/ref/open_data_commons"/>
+	<skos:exactMatch rdf:resource="http://www.ebi.ac.uk/swo/license/SWO_1000096"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.org/ref/odc-by_v1.0">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<rdfs:label>ODC-By v1.0</rdfs:label>
+	<skos:definition>The ODbL v1.0 allows a user of the databases to share, create and adapt the database. You must attribute any public use of the database, or works produced from the database. For redistribution of the database or derivative works, you must make the use of this license clear to others, and you must keep intact any notices on the original database. If you redistribute the database, or an adapted version of it, then you may use technological measures that restrict the work (such as DRM) as long as you also redistribute a version without such measures.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.org/ref/DataLicenseScheme"/>
+	<skos:prefLabel xml:lang="en">ODC-By v1.0</skos:prefLabel>
+	<skos:broader rdf:resource="https://data.nibio.org/ref/open_data_commons"/>
+	<skos:exactMatch rdf:resource="http://www.ebi.ac.uk/swo/license/SWO_1000100"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.org/ref/c_bddf68fc">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">a formal contract that specifies the terms and conditions under which data is shared between parties. It outlines the rights and obligations of both the data provider and the recipient, including how the data can be used, shared, and protected.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.org/ref/DataLicenseScheme"/>
+	<skos:topConceptOf rdf:resource="https://data.nibio.org/ref/DataLicenseScheme"/>
+	<skos:prefLabel xml:lang="en">Data Sharing Agreement (DSA)</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.org/ref/c_d786edcd">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">sharing under a  MADiPHS data sharing  agreement that specifies the terms and conditions under which data is shared between parties. It outlines the rights and obligations of both the data provider and the recipient, including how the data can be used, shared, and protected.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.org/ref/DataLicenseScheme"/>
+	<skos:prefLabel xml:lang="en">MADiPHS DSA</skos:prefLabel>
+	<skos:broader rdf:resource="https://data.nibio.org/ref/c_bddf68fc"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.no/ref/">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.no/ref/datafileformats">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="en">Data File Formats</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.no/ref/pdf">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A file format used to present documents in a manner independent of application software, hardware, and operating systems.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.no/ref/datafileformats"/>
+	<skos:prefLabel xml:lang="en">.pdf</skos:prefLabel>
+	<skos:altLabel xml:lang="en">Portable Document Format</skos:altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.no/ref/xlsx">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">An XML-based spreadsheet file format developed by Microsoft for use with Microsoft Excel.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.no/ref/datafileformats"/>
+	<skos:prefLabel xml:lang="en">.xlsx</skos:prefLabel>
+	<skos:altLabel xml:lang="en">Microsoft Excel Open XML Spreadsheet</skos:altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.no/ref/csv">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A simple file format used to store tabular data, such as a spreadsheet or database.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.no/ref/datafileformats"/>
+	<skos:prefLabel xml:lang="en">.csv</skos:prefLabel>
+	<skos:altLabel xml:lang="en">Comma Separated Values</skos:altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.no/ref/sql">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A file format that contains SQL code used to modify the contents of a database or to retrieve data from a database.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.no/ref/datafileformats"/>
+	<skos:prefLabel xml:lang="en">.sql</skos:prefLabel>
+	<skos:altLabel xml:lang="en">Structured Query Language Data</skos:altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.no/ref/json">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A lightweight data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.no/ref/datafileformats"/>
+	<skos:prefLabel xml:lang="en">.json</skos:prefLabel>
+	<skos:altLabel xml:lang="en">JavaScript Object Notation</skos:altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.no/ref/tiff">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A flexible raster (bitmap) image format supported by many image manipulation applications.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.no/ref/datafileformats"/>
+	<skos:prefLabel xml:lang="en">.tiff</skos:prefLabel>
+	<skos:altLabel xml:lang="en">Tag Image File Format</skos:altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.no/ref/mat">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A file format used by MATLAB software, typically containing matrices, variables, functions, or other data.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.no/ref/datafileformats"/>
+	<skos:prefLabel xml:lang="en">.mat</skos:prefLabel>
+	<skos:altLabel xml:lang="en">MATLAB file</skos:altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://data.nibio.no/ref/txt">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A standard text document that contains unformatted text, recognised by any text editor or word processing software.</skos:definition>
+	<skos:inScheme rdf:resource="https://data.nibio.no/ref/datafileformats"/>
+	<skos:prefLabel xml:lang="en">.txt</skos:prefLabel>
+	<skos:altLabel xml:lang="en">Text File</skos:altLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rd.madiphs.net/scheme/common-crops">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel>Common Crops</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/commonpests">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="en">Common Pests</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/SPFRUG">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A caterpillar that causes significant damage to maize and other crops in Malawi.</skos:definition>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/commonpests"/>
+	<skos:prefLabel xml:lang="en">Spodoptera frugiperda</skos:prefLabel>
+	<skos:altLabel xml:lang="en">Fall Armyworm</skos:altLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int/taxon">SPFRUG</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/HELIAR">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A moth whose larvae feed on various crops including groundnuts, causing extensive damage.</skos:definition>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/commonpests"/>
+	<skos:prefLabel xml:lang="en">Helicoverpa armigera</skos:prefLabel>
+	<skos:altLabel xml:lang="en">African Bollworm</skos:altLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int/taxon">HELIAR</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/MONOSE">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">An invasive pest species that affects cassava plants by feeding on the leaves.</skos:definition>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/commonpests"/>
+	<skos:prefLabel xml:lang="en">Mononychellus tanajoa</skos:prefLabel>
+	<skos:altLabel xml:lang="en">Cassava Green Mite</skos:altLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int/taxon">MONOSE</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/SPODLI">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A polyphagous pest that is known to feed on tobacco and many other crops.</skos:definition>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/commonpests"/>
+	<skos:prefLabel xml:lang="en">Spodoptera litura</skos:prefLabel>
+	<skos:altLabel xml:lang="en">Tobacco Cutworm</skos:altLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int/taxon">SPODLI</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/PHAKIS">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A fungus that causes rust disease in soybeans, leading to defoliation and reduced yields.</skos:definition>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/commonpests"/>
+	<skos:prefLabel xml:lang="en">Phakopsora pachyrhizi</skos:prefLabel>
+	<skos:altLabel xml:lang="en">Soybean Rust</skos:altLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int/taxon">PHAKIS</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<owl:imports rdf:resource="http://topbraid.org/schema/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#conceptScheme_a4cccdf1">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="en">UN Macro geographic regions</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_1391">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A starchy root crop, widely grown in tropical regions, used for food and flour.</skos:definition>
+	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:prefLabel xml:lang="en">Cassava</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Chinangwa</skos:prefLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int">MANES</skos:notation>
+	<schema:image rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Manihot_esculenta_-_Köhler–s_Medizinal-Pflanzen-090.jpg/220px-Manihot_esculenta_-_Köhler–s_Medizinal-Pflanzen-090.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_3483">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A legume crop known for its edible seeds, often used in cooking and for oil.</skos:definition>
+	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:prefLabel xml:lang="en">Groundnut</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Njugu</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Mtedza</skos:prefLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int">ARACX</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_7657">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A widely cultivated red or green fruit, used extensively in cooking.</skos:definition>
+	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:prefLabel xml:lang="en">Tomato</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Tomato</skos:prefLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int">SOLLY</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_12332">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A cereal grain first domesticated in Southern Mexico, a staple food globally.</skos:definition>
+	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:prefLabel xml:lang="en">Maize</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Chimanga</skos:prefLabel>
+	<skos:altLabel xml:lang="en-US">Corn</skos:altLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int">ZEAMX</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_14477">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A species of legume native to East Asia, widely grown for its edible bean.</skos:definition>
+	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:prefLabel xml:lang="en">Soybean</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Soja</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Soya</skos:prefLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int">GLYMX</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_850">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A long curved fruit that grows in clusters and has soft pulpy flesh and yellow skin when ripe.</skos:definition>
+	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:prefLabel xml:lang="en">Banana</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Thonde</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Bananazi</skos:prefLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int">MUSAA</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#conceptScheme_62afa144">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="en">Update frequencies</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_98c125a4">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:prefLabel xml:lang="en">Daily</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_8548533c">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:prefLabel xml:lang="en">Weekly</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_e26da0ba">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:prefLabel xml:lang="en">Monthly</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_e4d1137a">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:prefLabel xml:lang="en">Quarterly</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_d8dfabf4">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:prefLabel xml:lang="en">Semi-annually</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_1c97a174">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:prefLabel xml:lang="en">Annually</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_d02399d1">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:prefLabel xml:lang="en">Infrequently/unscheduled</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_6807c50e">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#dataset_physical_format"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#dataset_physical_format"/>
+	<skos:prefLabel xml:lang="en">Paper</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_31e9a711">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#dataset_physical_format"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#dataset_physical_format"/>
+	<skos:prefLabel xml:lang="en">Electronic</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#dataset_physical_format">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="en">Dataset physical format</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#conceptScheme_9e2cfdfa">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="en">Spatial reference categories</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_fd25ee02">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
+	<skos:prefLabel xml:lang="en">Data records are NOT included</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_56b63488">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
+	<skos:prefLabel xml:lang="en">Data records are inclulded, ALL records include spatial information, records are NOT georeferenced</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_cb970135">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
+	<skos:prefLabel xml:lang="en">Data records are included and ALL are georeferences</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_b28b92e7">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
+	<skos:prefLabel xml:lang="en">Data records are included and SOME are georeferenced</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_874d5d55">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
+	<skos:prefLabel xml:lang="en">Not sure</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_5a6946e1">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
+	<skos:prefLabel xml:lang="en">Other</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#conceptScheme_22c95800">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="en">Timestamp record categories</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_21594acd">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_22c95800"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_22c95800"/>
+	<skos:prefLabel xml:lang="en">Data records are NOT included</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_a0dde2d5">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_22c95800"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_22c95800"/>
+	<skos:prefLabel xml:lang="en">Data records are included and ALL include a timestamp</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_a25bd43f">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_22c95800"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_22c95800"/>
+	<skos:prefLabel xml:lang="en">Data records are included and SOME include a timestamp</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_3c497f9f">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_22c95800"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_22c95800"/>
+	<skos:prefLabel xml:lang="en">Data records are included and NONE include a timestamp</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_a3a8e068">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_22c95800"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_22c95800"/>
+	<skos:prefLabel xml:lang="en">Not sure</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#conceptScheme_909f7bbb">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="en">Privacy</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_b16d2487">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_909f7bbb"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_909f7bbb"/>
+	<skos:prefLabel xml:lang="en">The data does not contain any personal or commercial information</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_45fa9a35">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_909f7bbb"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_909f7bbb"/>
+	<skos:prefLabel xml:lang="en">The data contains commercially sensitive information</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_777b79b4">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_909f7bbb"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_909f7bbb"/>
+	<skos:prefLabel xml:lang="en">The data contains personal information</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_69fc1494">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_909f7bbb"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_909f7bbb"/>
+	<skos:prefLabel xml:lang="en">The data contains commercially sensitive AND personal information</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_4581d1c6">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_909f7bbb"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_909f7bbb"/>
+	<skos:prefLabel xml:lang="en">Not sure</skos:prefLabel>
+</rdf:Description>
+
+</rdf:RDF>
