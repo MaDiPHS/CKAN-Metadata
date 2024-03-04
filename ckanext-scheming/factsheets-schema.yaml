@@ -84,11 +84,11 @@ dataset_fields:
   required: true
 
 - field_name: spatial
-  label: Spatial validity: Where is this data valid for? (GeoJson, use https://geojson.io to create)
+  label: "Spatial validity: Where is this data valid for? (GeoJson, use https://geojson.io to create)"
   preset: json_object
 
 - field_name: spatial_resolution
-  label: Spatial resolution: The smallest feature that the dataset describes
+  label: "Spatial resolution: The smallest feature that the dataset describes"
   form_placeholder: field, 10km2, county
 
 - field_name: record_georeferenced
