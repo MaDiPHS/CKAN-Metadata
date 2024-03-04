@@ -35,12 +35,17 @@ dataset_fields:
 - field_name: notes
   label: Description
   form_snippet: markdown.html
-  form_placeholder: eg. Some useful notes about the data
+  form_placeholder: eg. Some useful notes about the data - both WHAT and WHY (purpose)
+
+- field_name: reference_number
+  label: Reference number
+  form_placeholder: e.g. ABC/12345/556677889
 
 # Vocabulary: EPPO codes (https://gd.eppo.int)
 - field_name: pest
   label: Pest
   preset: multiple_select
+  form_include_blank_choice: true
   choices:
     - value: https://gd.eppo.int/taxon/HELIAR
       label: African Bollworm
@@ -48,13 +53,13 @@ dataset_fields:
       label: Cassava Green Mite
     - value: https://gd.eppo.int/taxon/PHAKIS
       label: Soybean Rust
-    - value: http://aims.fao.org/aos/agrovoc/c_25452
+    - value: https://gd.eppo.int/taxon/LAPHFR
       label: Fall Armyworm
     - value: https://gd.eppo.int/taxon/SPODLI
       label: Cutworm
     - value: https://gd.eppo.int/taxon/BUSSFU
       label: Maize Stalk Borer
-    - value: http://aims.fao.org/aos/agrovoc/c_e844dfc3
+    - value: https://gd.eppo.int/taxon/GNORAB
       label: Tuta absoluta
   required: true
 
@@ -62,24 +67,91 @@ dataset_fields:
 - field_name: crop
   label: Crop
   preset: multiple_select
+  form_include_blank_choice: true
   choices:
-    - value: http://aims.fao.org/aos/agrovoc/c_12332
+    - value: https://gd.eppo.int/taxon/ZEAMX
       label: Maize
-    - value: LYPES
+    - value: https://gd.eppo.int/taxon/LYPES
       label: Tomato
-    - value: ARHHY
+    - value: https://gd.eppo.int/taxon/ARHHY
       label: Groundnut
-    - value: GLXMA
+    - value: https://gd.eppo.int/taxon/GLXMA
       label: Soybean
-    - value: MANES
+    - value: https://gd.eppo.int/taxon/MANES
       label: Cassava
-    - value: MUBPA
+    - value: https://gd.eppo.int/taxon/MUBPA
       label: Banana
   required: true
 
 - field_name: spatial
-  label: Spatial information (GeoJson)
+  label: Spatial validity: Where is this data valid for? (GeoJson, use https://geojson.io to create)
   preset: json_object
+
+- field_name: spatial_resolution
+  label: Spatial resolution: The smallest feature that the dataset describes
+  form_placeholder: field, 10km2, county
+
+- field_name: record_georeferenced
+  label: If the dataset includes data records, do the records include spatial information?
+  preset: select
+  choices:
+  - value: http://voc.madiphs.org#c_fd25ee02
+    label: Data records are NOT included
+  - value: http://voc.madiphs.org#c_56b63488
+    label: Data records are included, ALL records include spatial information, records are NOT georeferenced
+  - value: http://voc.madiphs.org#c_cb970135
+    label: Data records are included and ALL are georeferences
+  - value: http://voc.madiphs.org#c_b28b92e7
+    label: Data records are included and SOME are georeferenced
+  - value: http://voc.madiphs.org#c_874d5d55
+    label: Not sure
+  - value: http://voc.madiphs.org#c_5a6946e1
+    label: Other
+
+- field_name: temporal_resolution_seconds
+  label: Time/temporal resolution of the dataset in seconds
+  form_placeholder: e.g. 3600 (hourly), 86400 (daily), 604800 (weekly), 2592000 (monthly), 31536000 (yearly)
+
+- field_name: record_timestamp
+  label: If the data/knowledge product includes data records, do these data records include a timestamp?
+  preset: select
+  choices: 
+  - value: http://voc.madiphs.org#c_21594acd
+    label: Data records are NOT included
+  - value: http://voc.madiphs.org#c_a0dde2d5
+    label: Data records are included and ALL include a timestamp
+  - value: http://voc.madiphs.org#c_a25bd43f
+    label: Data records are included and SOME include a timestamp
+  - value: http://voc.madiphs.org#c_3c497f9f
+    label: Data records are included and NONE include a timestamp
+  - value: http://voc.madiphs.org#c_a3a8e068
+    label: Not sure
+
+- field_name: time_period_start
+  label: Start of the time period covered in the data/knowledge product
+  preset: date
+
+- field_name: time_period_end
+  label: End of the time period covered in the data/knowledge product
+  preset: date
+
+- field_name: dataset_type
+  label: Dataset type
+  form_placeholder: e.g. Database, tabular data, fact sheet, pest management decision guide, etc
+
+- field_name: dataset_size
+  label: Dataset size
+  form_placeholder: e.g. 10,000 records, 15 pages
+
+- field_name: dataset_physical_format
+  label: Physical format of the dataset
+  preset: select
+  form_include_blank_choice: true
+  choices: 
+    - value: http://voc.madiphs.org#c_31e9a711
+      label: Electronic
+    - value: http://voc.madiphs.org#c_6807c50e
+      label: Paper
 
 # Vocabulary: Using ISO 693-2 (https://en.wikipedia.org/wiki/ISO_639-2)
 - field_name: language
@@ -103,24 +175,26 @@ dataset_fields:
   preset: date
   form_placeholder: Please select a date
 
+# Using MaDiPHS vocabulary
 - field_name: update_frequency
   label: How often the knowledge product is updated
   preset: select
   choices:
-    - value: daily
-      label: Daily
-    - value: weekly
-      label: Weekly
-    - value: monthly
-      label: Monthly
-    - value: quarterly
-      label: Quarterly
-    - value: semi-annually
-      label: Semi-annually
-    - value: annually
-      label: Annually
-    - value: infrequently
+    - value: http://voc.madiphs.org#c_d02399d1
       label: Infrequently/unscheduled
+    - value: http://voc.madiphs.org#c_98c125a4
+      label: Daily
+    - value: http://voc.madiphs.org#c_8548533c
+      label: Weekly
+    - value: http://voc.madiphs.org#c_e26da0ba
+      label: Monthly
+    - value: http://voc.madiphs.org#c_e4d1137a
+      label: Quarterly
+    - value: http://voc.madiphs.org#c_d8dfabf4
+      label: Semi-annually
+    - value: http://voc.madiphs.org#c_1c97a174
+      label: Annually
+  required: true
 
 - field_name: most_recent_update
   label: When the product was last updated
@@ -130,6 +204,21 @@ dataset_fields:
   label: Tags
   preset: tag_string_autocomplete
   form_placeholder: eg. agriculture, pesticide, IPM
+
+- field_name: privacy
+  label: Privacy
+  preset: select
+  choices:
+  - value: http://voc.madiphs.org#c_b16d2487
+    label: The data does not contain any personal or commercial information
+  - value: http://voc.madiphs.org#c_45fa9a35
+    label: The data contains commercially sensitive information
+  - value: http://voc.madiphs.org#c_777b79b4
+    label: The data contains personal information
+  - value: http://voc.madiphs.org#c_69fc1494
+    label: The data contains commercially sensitive AND personal information
+  - value: http://voc.madiphs.org#c_4581d1c6
+    label: Not sure
 
 - field_name: license_id
   label: License
