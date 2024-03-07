@@ -1,5 +1,5 @@
-#    The schema used for knowledge product datasets, e.g. factsheets
-#    Copyright (C) 2023  Tor-Einar Skog, NIBIO
+#    The schema used for plant health related datasets
+#    Copyright (C) 2024  Tor-Einar Skog, NIBIO
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
@@ -15,8 +15,8 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 scheming_version: 2
-dataset_type: plant-health-knowledge-product
-about: Extends the default CKAN dataset schema with essential meta data for plant health knowledge products such as fact sheets
+dataset_type: plant-health-dataset
+about: Extends the default CKAN dataset schema with essential meta data for plant health datasets
 about_url: http://github.com/ckan/ckanext-scheming
 
 
@@ -36,6 +36,10 @@ dataset_fields:
   label: Description
   form_snippet: markdown.html
   form_placeholder: eg. Some useful notes about the data - both WHAT and WHY (purpose)
+
+- field_name: reference_number
+  label: Reference number
+  form_placeholder: e.g. ABC/12345/556677889
 
 # Vocabulary: EPPO codes (https://gd.eppo.int)
 - field_name: pest
@@ -80,15 +84,67 @@ dataset_fields:
   required: true
 
 - field_name: spatial
-  label: "Spatial validity: What area(s) does the knowledge product cover? (GeoJson, use https://geojson.io to create)"
+  label: "Spatial validity: Where is this data valid for? (GeoJson, use https://geojson.io to create)"
   preset: json_object
+
+- field_name: spatial_resolution
+  label: "Spatial resolution: The smallest feature that the dataset describes"
+  form_placeholder: field, 10km2, county
+
+- field_name: record_georeferenced
+  label: If the dataset includes data records, do the records include spatial information?
+  preset: select
+  choices:
+  - value: http://voc.madiphs.org#c_fd25ee02
+    label: Data records are NOT included
+  - value: http://voc.madiphs.org#c_56b63488
+    label: Data records are included, ALL records include spatial information, records are NOT georeferenced
+  - value: http://voc.madiphs.org#c_cb970135
+    label: Data records are included and ALL are georeferences
+  - value: http://voc.madiphs.org#c_b28b92e7
+    label: Data records are included and SOME are georeferenced
+  - value: http://voc.madiphs.org#c_874d5d55
+    label: Not sure
+  - value: http://voc.madiphs.org#c_5a6946e1
+    label: Other
+
+- field_name: temporal_resolution_seconds
+  label: Time/temporal resolution of the dataset in seconds
+  form_placeholder: e.g. 3600 (hourly), 86400 (daily), 604800 (weekly), 2592000 (monthly), 31536000 (yearly)
+
+- field_name: record_timestamp
+  label: If the data/knowledge product includes data records, do these data records include a timestamp?
+  preset: select
+  choices: 
+  - value: http://voc.madiphs.org#c_21594acd
+    label: Data records are NOT included
+  - value: http://voc.madiphs.org#c_a0dde2d5
+    label: Data records are included and ALL include a timestamp
+  - value: http://voc.madiphs.org#c_a25bd43f
+    label: Data records are included and SOME include a timestamp
+  - value: http://voc.madiphs.org#c_3c497f9f
+    label: Data records are included and NONE include a timestamp
+  - value: http://voc.madiphs.org#c_a3a8e068
+    label: Not sure
+
+- field_name: time_period_start
+  label: Start of the time period covered in the data/knowledge product
+  preset: date
+
+- field_name: time_period_end
+  label: End of the time period covered in the data/knowledge product
+  preset: date
 
 - field_name: dataset_type
   label: Dataset type
   form_placeholder: e.g. Database, tabular data, fact sheet, pest management decision guide, etc
 
+- field_name: dataset_size
+  label: Dataset size
+  form_placeholder: e.g. 10,000 records, 15 pages
+
 - field_name: dataset_physical_format
-  label: Physical format of the knowledge product
+  label: Physical format of the dataset
   preset: select
   form_include_blank_choice: true
   choices: 
@@ -148,6 +204,21 @@ dataset_fields:
   label: Tags
   preset: tag_string_autocomplete
   form_placeholder: eg. agriculture, pesticide, IPM
+
+- field_name: privacy
+  label: Privacy
+  preset: select
+  choices:
+  - value: http://voc.madiphs.org#c_b16d2487
+    label: The data does not contain any personal or commercial information
+  - value: http://voc.madiphs.org#c_45fa9a35
+    label: The data contains commercially sensitive information
+  - value: http://voc.madiphs.org#c_777b79b4
+    label: The data contains personal information
+  - value: http://voc.madiphs.org#c_69fc1494
+    label: The data contains commercially sensitive AND personal information
+  - value: http://voc.madiphs.org#c_4581d1c6
+    label: Not sure
 
 - field_name: license_id
   label: License
