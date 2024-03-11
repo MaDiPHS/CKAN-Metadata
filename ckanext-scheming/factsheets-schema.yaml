@@ -80,7 +80,7 @@ dataset_fields:
   required: true
 
 - field_name: spatial
-  label: "Spatial validity: What area(s) does the knowledge product cover? (GeoJson, use https://geojson.io to create)"
+  label: Area covered (GeoJson coordinates, use https://geojson.io to create)
   preset: json_object
 
 - field_name: dataset_type
@@ -88,7 +88,7 @@ dataset_fields:
   form_placeholder: e.g. Database, tabular data, fact sheet, pest management decision guide, etc
 
 - field_name: dataset_physical_format
-  label: Physical format of the knowledge product
+  label: Factsheet format
   preset: select
   form_include_blank_choice: true
   choices: 
@@ -115,13 +115,13 @@ dataset_fields:
   multiple: true
 
 - field_name: creation_date
-  label: When the knowledge product was created
+  label: Date created
   preset: date
   form_placeholder: Please select a date
 
 # Using MaDiPHS vocabulary
 - field_name: update_frequency
-  label: How often the knowledge product is updated
+  label: Frequency of update
   preset: select
   choices:
     - value: http://voc.madiphs.org#c_d02399d1
@@ -141,7 +141,7 @@ dataset_fields:
   required: true
 
 - field_name: most_recent_update
-  label: When the product was last updated
+  label: Last updated
   preset: date
 
 - field_name: tag_string
@@ -155,7 +155,7 @@ dataset_fields:
   help_text: License definitions and additional information can be found at http://opendefinition.org/
 
 - field_name: owner_org
-  label: Organization
+  label: Owner
   preset: dataset_organization
 
 - field_name: url
