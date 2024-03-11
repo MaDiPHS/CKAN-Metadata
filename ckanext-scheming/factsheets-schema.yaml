@@ -144,7 +144,7 @@ dataset_fields:
       label: Semi-annually
     - value: http://voc.madiphs.org#c_1c97a174
       label: Annually
-  required: true
+  required: false
 
 - field_name: most_recent_update
   label: Last updated
