@@ -90,6 +90,34 @@ dataset_fields:
   choices:
   - value: MWI
     label: Malawi
+  - value: CMR
+    label: Cameroon
+  - value: SWZ
+    label: Eswatini
+  - value: ETH
+    label: Ethiopia
+  - value: GHA
+    label: Ghana
+  - value: KEN
+    label: Kenya
+  - value: NAM
+    label: namibia
+  - value: NGA
+    label: Nigeria
+  - value: RWA
+    label: Rwanda
+  - value: ZAF
+    label: South Africa
+  - value: SSD
+    label: South Sudan
+  - value: TZA
+    label: Tanzania
+  - value: UGA
+    label: Uganda
+  - value: ZMB
+    label: Zambia
+  - value: ZWE
+    label: Zimbabwe
 
 - field_name: spatial
   label: Area covered (GeoJson coordinates, use https://geojson.io to create)
