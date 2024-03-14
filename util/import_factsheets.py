@@ -25,6 +25,7 @@ from dateutil.parser import parse, ParserError
 import requests
 import validators
 import os
+import json
 from dotenv import load_dotenv
 
 # This code started out by studying this example: https://docs.ckan.org/en/2.9/api/#example-importing-datasets-with-the-ckan-api
@@ -34,6 +35,7 @@ from dotenv import load_dotenv
 load_dotenv()
 # This API key can be obtained by logging into ckan.madiphs.org 
 api_key=os.getenv("CKAN_API_KEY")
+geocountries = json.load(open("simplified_geocountries.geojson"))
 
 # ckanext-scheming dataset type
 scheming_type = "plant-health-knowledge-product"
@@ -85,7 +87,26 @@ dataset_physical_format_dict = {
     "paper": "http://voc.madiphs.org#c_6807c50e"
 }
 
-license_dict = {
+country_code_dict = {
+    "malawi": "MWI",
+    "cameroon": "CMR",
+    "eswatini": "SWZ",
+    "ethiopia": "ETH",
+    "ghana": "GHA",
+    "kenya": "KEN",
+    "namibia": "NAM",
+    "nigeria":"NGA",
+    "rwanda":"RWA",
+    "south africa": "ZAF",
+    "south sudan": "SSD",
+    "tanzania": "TZA",
+    "uganda": "UGA",
+    "zambia": "ZMB",
+    "zimbabwe": "ZWE",
+    "africa": None
+}
+
+license_code_set = {
     "notspecified",
     "odc-pddl",
     "odc-odbl",
@@ -128,6 +149,13 @@ def get_fuzzy_date_safe(date_str):
         return parse(date_str)
     except ParserError as ex:
         return None
+    
+def get_geojson(country_codes):
+    filtered_geocountries = {"type": "FeatureCollection", "features":[]}
+    for country in geocountries["features"]:
+        if country["properties"]["ISO_A3"] in country_codes:
+            filtered_geocountries["features"].append(country)
+    return filtered_geocountries
 
 def import_row(row, row_idx, dry_run=False):
     
@@ -157,7 +185,7 @@ def import_row(row, row_idx, dry_run=False):
         validation_messages.append(f"We could not find this organization in our lists: \"{row[11].strip()}\"")
     # License
     license_id = row[25].strip().lower()
-    if license_id not in license_dict:
+    if license_id not in license_code_set:
         validated = False
         validation_messages.append("License with id = \"%s\" not found" % license_id)
 
@@ -170,6 +198,16 @@ def import_row(row, row_idx, dry_run=False):
         except validators.ValidationError as ex:
             validated = False
             validation_messages.append(f"{url} is not a valid URL")
+    
+    # Spatial
+    country_names = [x.strip() for x in row[22].split(",")]
+    #print(country_names)
+    try:
+        country_codes = [country_code_dict[country_name.lower()] for country_name in country_names]
+        spatial = json.dumps(get_geojson(country_codes))
+    except KeyError:
+        validated = False
+        validation_messages.append(f"\"{row[22]}\" is not a valid list of country names")
 
     if not validated:
         validation_message_str = "\n* ".join(validation_messages)
@@ -197,8 +235,11 @@ def import_row(row, row_idx, dry_run=False):
         "dataset_type": row[18],
         "dataset_physical_format": dataset_physical_format_dict[row[19].strip().lower()],
         "dataset_location": row[23],
+        "country_codes": country_codes,
+        "spatial": spatial,
         "license_id": license_id
     } 
+
 
     resource_dict = {
         "package_id": dataset_name,
@@ -213,6 +254,7 @@ def import_row(row, row_idx, dry_run=False):
         data=dataset_dict,
         headers={'Authorization':api_key}
     )
+    
     if r.status_code == 200:
         r2 = requests.post(
             "https://ckan.madiphs.org/api/3/action/resource_create",
@@ -220,16 +262,19 @@ def import_row(row, row_idx, dry_run=False):
             headers={'Authorization':api_key}
         )
         print(r2.text)
-    #print(r.text)
+    else:
+        print(r.text)
 
 
-with open("factsheets.csv") as csvfile:
+factsheets_path= os.getenv("FACTSHEETS_CSV_PATH")
+
+with open(factsheets_path) as csvfile:
     reader = csv.reader(csvfile, delimiter=";", quotechar="\"")
     all_rows_validated = True
     for row_idx, row in enumerate(reader):
         if row[0] == "Crop":
             continue
-        if not import_row(row, row_idx, True):
+        if not import_row(row, row_idx + 1, True):
             all_rows_validated = False
     if all_rows_validated:
         print("Next: import the data")
