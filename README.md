@@ -12,3 +12,6 @@ extension and added the factsheets-schema.yaml definition.
 
 ## vocabularies
 With guidance from Knowmatics we have created vocabularies for a number of categories in the schemas. These can be found in SKOS/RDF format under the `vocabularies` directory. It has been created using [Vocbench3](https://bitbucket.org/art-uniroma2/vocbench3/src/master/)
+
+## Utilities
+In the `util/` directory, you find scripts that are or have been part of the process of creating metadata or importing data
