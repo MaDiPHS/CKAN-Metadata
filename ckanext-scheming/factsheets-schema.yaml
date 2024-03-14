@@ -67,6 +67,7 @@ dataset_fields:
   label: Pest
   preset: multiple_select
   form_include_blank_choice: true
+  required: true
   choices:
     - value: https://gd.eppo.int/taxon/HELIAR
       label: African Bollworm
@@ -82,7 +83,61 @@ dataset_fields:
       label: Maize Stalk Borer
     - value: https://gd.eppo.int/taxon/GNORAB
       label: Tuta absoluta
-  required: true
+    - value: https://gd.eppo.int/taxon/MSV000
+      label: Maize streak virus
+    - value: https://gd.eppo.int/taxon/PUCCSO
+      label: Common rust of maize
+    - value: https://gd.eppo.int/taxon/LIRISA
+      label: Vegetable leaf miner
+    - value: https://gd.eppo.int/taxon/TETREV
+      label: Red spider mite
+    - value: https://gd.eppo.int/taxon/TETRUR
+      label: Two-spotted red spider mite
+    - value: https://gd.eppo.int/taxon/BUSSFU
+      label: Maize stem borer
+    - value: https://gd.eppo.int/taxon/LAPHEX
+      label: African armyworm
+    - value: https://gd.eppo.int/taxon/PHYTIN
+      label: Late blight of potato/tomato
+    - value: https://gd.eppo.int/taxon/COSMSO
+      label: Banana borer weevil
+    - value: https://gd.eppo.int/taxon/BBTV00
+      label: Banana bunchy top virus
+    - value: https://gd.eppo.int/taxon/BEMITA
+      label: Silverleaf whitefly
+    - value: https://gd.eppo.int/taxon/MONNTA
+      label: Cassava green mite
+    - value: https://gd.eppo.int/taxon/CBSAV0
+      label: Cassava brown streak virus
+    - value: https://gd.eppo.int/taxon/APHICR
+      label: Groundnut aphid
+    - value: https://gd.eppo.int/taxon/RRV000
+      label: Rose rosette disease
+    - value: https://gd.eppo.int/taxon/ASPEFL
+      label: Aspergillus flavus
+    - value: https://gd.eppo.int/taxon/AKTVO
+      label: Alectra vogelii
+  
+
+
+    
+
+  # Unknowns/ambiguous
+  #Maize lethal necrosis
+  #Striga https://gd.eppo.int/search?k=striga 
+  #Ralstonia solanacearum https://gd.eppo.int/search?k=bacterial+wilt 
+  #Early blight - is it Alternaria solani (https://gd.eppo.int/taxon/ALTESO) or linariae (https://gd.eppo.int/taxon/ALTETP)
+  #Root knot Nematodes: https://gd.eppo.int/search?k=Meloidogyne
+  #Banana corm weevil
+  #Banana fusarium wilt - is it https://gd.eppo.int/taxon/FUSACB  ?
+  #Cassava mosaic virus disease - need to find it in EPPO: https://gd.eppo.int/taxon/1BEGOG 
+  #Mexican leafminers (row 67) = Tuta absoluta?
+
+
+
+
+
+
 
 - field_name: country_codes
   label: Countries covered
