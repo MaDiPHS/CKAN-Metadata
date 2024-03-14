@@ -84,6 +84,12 @@ dataset_fields:
       label: Tuta absoluta
   required: true
 
+- field_name: country_codes
+  label: Countries covered
+  preset: multiple_select
+  choices:
+  - value: MWI
+    label: Malawi
 
 - field_name: spatial
   label: Area covered (GeoJson coordinates, use https://geojson.io to create)
