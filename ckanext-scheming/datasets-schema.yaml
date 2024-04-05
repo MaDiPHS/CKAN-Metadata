@@ -91,7 +91,7 @@ dataset_fields:
 - field_name: spatial
   label: Area covered (GeoJson coordinates, use https://geojson.io to create)
   preset: json_object
-  display_snippet: madiphstheming_geojson
+  display_snippet: madiphstheming_geojson.html
 
 - field_name: spatial_resolution
   label: Type of spatial resolution
