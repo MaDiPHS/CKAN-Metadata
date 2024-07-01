@@ -125,7 +125,7 @@ dataset_fields:
     # Banana
     - value: https://gd.eppo.int/taxon/COSMSO
       label: Banana borer weevil
-      - value: https://gd.eppo.int/taxon/BBTV00
+    - value: https://gd.eppo.int/taxon/BBTV00
       label: Banana bunchy top virus
     - value: https://gd.eppo.int/taxon/FUSACB
       label: Banana fusarium wilt
