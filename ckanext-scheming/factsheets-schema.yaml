@@ -135,8 +135,8 @@ dataset_fields:
     # Groundnut
     - value: https://gd.eppo.int/taxon/APHICR
       label: Groundnut aphid
-    - value: https://gd.eppo.int/taxon/RRV000
-      label: Rose rosette disease
+    - value: https://gd.eppo.int/taxon/GRV000
+      label: Groundnut rosette disease
     - value: https://gd.eppo.int/taxon/ASPEFL
       label: Aspergillus flavus
     - value: https://gd.eppo.int/taxon/AKTVO
