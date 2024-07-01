@@ -148,6 +148,9 @@ dataset_fields:
       label: Soybean Rust
     - value: https://gd.eppo.int/taxon/SPODLI
       label: Cutworm
+
+    - value: "000"
+      label: "Unknown"
     
     
     
@@ -329,6 +332,8 @@ dataset_fields:
       label: French
     - value: deu
       label: German
+    - value: "000"
+      label: Unknown
   multiple: true
 
 - field_name: creation_date
