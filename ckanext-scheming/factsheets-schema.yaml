@@ -90,6 +90,8 @@ dataset_fields:
       label: Maize grey leaf spot
     - value: https://gd.eppo.int/taxon/STRHE
       label: Striga
+    - value: http://voc.madiphs.org#c_37c84fd7
+      label: Maize lethal necrosis
 
     # Tomato
     - value: https://gd.eppo.int/taxon/GNORAB
