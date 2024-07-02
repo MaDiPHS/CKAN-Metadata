@@ -152,33 +152,6 @@ dataset_fields:
     - value: "000"
       label: "Unknown"
     
-    
-    
-    
-    
-    
-    
-  
-
-
-    
-
-  # Unknowns/ambiguous
-  #Maize lethal necrosis
-  #Striga https://gd.eppo.int/search?k=striga 
-  #Ralstonia solanacearum https://gd.eppo.int/search?k=bacterial+wilt 
-  #Early blight - is it Alternaria solani (https://gd.eppo.int/taxon/ALTESO) or linariae (https://gd.eppo.int/taxon/ALTETP)
-  #Root knot Nematodes: https://gd.eppo.int/search?k=Meloidogyne
-  #Banana corm weevil
-  #Banana fusarium wilt - is it https://gd.eppo.int/taxon/FUSACB  ?
-  #Cassava mosaic virus disease - need to find it in EPPO: https://gd.eppo.int/taxon/1BEGOG 
-  #Mexican leafminers (row 67) = Tuta absoluta?
-
-
-
-
-
-
 
 - field_name: country_codes
   label: Countries covered
@@ -298,6 +271,7 @@ dataset_fields:
 - field_name: spatial
   label: Area covered (GeoJson coordinates, use https://geojson.io to create)
   preset: json_object
+  display_snippet: madiphstheming_geojson.html
 
 - field_name: dataset_type
   label: Dataset type
