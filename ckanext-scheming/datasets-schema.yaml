@@ -42,48 +42,6 @@ dataset_fields:
   preset: tag_string_autocomplete
   form_placeholder: eg. agriculture, pesticide, IPM
 
-# Vocabulary: EPPO codes (https://gd.eppo.int)
-- field_name: crop
-  label: Crop
-  preset: multiple_select
-  form_include_blank_choice: true
-  choices:
-    - value: https://gd.eppo.int/taxon/ZEAMX
-      label: Maize
-    - value: https://gd.eppo.int/taxon/LYPES
-      label: Tomato
-    - value: https://gd.eppo.int/taxon/ARHHY
-      label: Groundnut
-    - value: https://gd.eppo.int/taxon/GLXMA
-      label: Soybean
-    - value: https://gd.eppo.int/taxon/MANES
-      label: Cassava
-    - value: https://gd.eppo.int/taxon/MUBPA
-      label: Banana
-  required: true
-
-# Vocabulary: EPPO codes (https://gd.eppo.int)
-- field_name: pest
-  label: Pest
-  preset: multiple_select
-  form_include_blank_choice: true
-  choices:
-    - value: https://gd.eppo.int/taxon/HELIAR
-      label: African Bollworm
-    - value: https://gd.eppo.int/taxon/MONOSE
-      label: Cassava Green Mite
-    - value: https://gd.eppo.int/taxon/PHAKIS
-      label: Soybean Rust
-    - value: https://gd.eppo.int/taxon/LAPHFR
-      label: Fall Armyworm
-    - value: https://gd.eppo.int/taxon/SPODLI
-      label: Cutworm
-    - value: https://gd.eppo.int/taxon/BUSSFU
-      label: Maize Stalk Borer
-    - value: https://gd.eppo.int/taxon/GNORAB
-      label: Tuta absoluta
-  required: true
-
 - field_name: reference_number
   label: Reference number
   form_placeholder: e.g. ABC/12345/556677889
@@ -174,6 +132,8 @@ dataset_fields:
       label: French
     - value: deu
       label: German
+    - value: "000"
+      label: Unknown
   multiple: true
 
 - field_name: creation_date
@@ -200,7 +160,7 @@ dataset_fields:
       label: Semi-annually
     - value: http://voc.madiphs.org#c_1c97a174
       label: Annually
-  required: true
+  required: false
 
 - field_name: most_recent_update
   label: Last updated
