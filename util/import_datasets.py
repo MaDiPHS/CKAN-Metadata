@@ -28,13 +28,16 @@ import csv
 from dateutil.parser import parse, ParserError
 import requests
 import validators
-
+from dotenv import load_dotenv
 import africa_metadata, metadata, skos_utils
 
 # This example was found here: https://docs.ckan.org/en/2.9/api/#example-importing-datasets-with-the-ckan-api
 
-# This API key was obtained by logging into ckan.madiphs.org and 
-api_key="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJuSXdOYmFwbzBXeTNhZ2tJZG9CLVNhS2RDYWxNMTZDcHQ0NlBjTGlqMnFFIiwiaWF0IjoxNzA5ODE4Mjc4fQ.j-BDfF_TIGeHGI6y0F2XUdYxr7u6hp0xCYwR2C4wLlA"
+# This is needed to load any ENV settings from a .env (dotenv) file
+# on your path
+load_dotenv()
+# This API key can be obtained by logging into ckan.madiphs.org 
+api_key=os.getenv("CKAN_API_KEY")
 
 # ckanext-scheming dataset type
 scheming_type = "plant-health-knowledge-product"
