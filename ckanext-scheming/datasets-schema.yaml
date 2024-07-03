@@ -146,6 +146,8 @@ dataset_fields:
   choices:
     - value: http://voc.madiphs.org#c_d02399d1
       label: Infrequently/unscheduled
+    - value: http://voc.madiphs.org#c_5c3c0589
+      label: Hourly
     - value: http://voc.madiphs.org#c_98c125a4
       label: Daily
     - value: http://voc.madiphs.org#c_8548533c
