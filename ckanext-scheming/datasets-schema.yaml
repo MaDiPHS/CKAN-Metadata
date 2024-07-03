@@ -63,6 +63,8 @@ dataset_fields:
     label: Data records are NOT included
   - value: http://voc.madiphs.org#c_56b63488
     label: Data records are included, ALL records include spatial information, records are NOT georeferenced
+  - value: http://voc.madiphs.org#c_df3474ed
+    label: Data records are included, SOME records include spatial information, records are NOT georeferenced
   - value: http://voc.madiphs.org#c_cb970135
     label: Data records are included and ALL are georeferences
   - value: http://voc.madiphs.org#c_b28b92e7
@@ -72,9 +74,9 @@ dataset_fields:
   - value: http://voc.madiphs.org#c_5a6946e1
     label: Other
 
-- field_name: temporal_resolution_seconds
-  label: Sampling frequency(seconds)
-  form_placeholder: e.g. 3600 (hourly), 86400 (daily), 604800 (weekly), 2592000 (monthly), 31536000 (yearly)
+- field_name: temporal_resolution
+  label: Temporal resolution
+  form_placeholder: e.g. Hourly, Daily, Monthly
 
 - field_name: record_timestamp
   label: Timestamp for data records
@@ -98,10 +100,6 @@ dataset_fields:
 - field_name: time_period_end
   label: Validity period end
   preset: date
-
-- field_name: dataset_type
-  label: Dataset type
-  form_placeholder: e.g. Database, tabular data, fact sheet, pest management decision guide, etc
 
 - field_name: dataset_size
   label: Dataset size
