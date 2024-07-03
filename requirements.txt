@@ -1,0 +1,6 @@
+rdflib
+pytest
+geopandas
+validators
+requests
+python-dotenv

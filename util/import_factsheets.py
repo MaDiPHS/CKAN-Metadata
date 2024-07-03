@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-
 """
-    Util script to import knowledge products datasets from the Excel
+    Util script to import factsheet datasets from the Excel
     spreadsheets produced by CABI
     Copyright (C) 2024 NIBIO
 
@@ -20,109 +19,37 @@
 
 """
 
+
+import os
+import re
 import csv
 from dateutil.parser import parse, ParserError
 import requests
 import validators
-import os
-import json
 from dotenv import load_dotenv
+from pathlib import Path
 
-# This code started out by studying this example: https://docs.ckan.org/en/2.9/api/#example-importing-datasets-with-the-ckan-api
+my_path = Path( __file__ ).parent.absolute()
+
+import africa_metadata, metadata, skos_utils
+
+# This example was found here: https://docs.ckan.org/en/2.9/api/#example-importing-datasets-with-the-ckan-api
 
 # This is needed to load any ENV settings from a .env (dotenv) file
 # on your path
 load_dotenv()
 # This API key can be obtained by logging into ckan.madiphs.org 
 api_key=os.getenv("CKAN_API_KEY")
-geocountries = json.load(open("simplified_geocountries.geojson"))
 
 # ckanext-scheming dataset type
 scheming_type = "plant-health-knowledge-product"
 
-# Lookup dicts for validation and data conversion from text to category
-crop_dict = {
-    "maize": "https://gd.eppo.int/taxon/ZEAMX",
-    "tomato": "https://gd.eppo.int/taxon/LYPES",
-    "groundnut": "https://gd.eppo.int/taxon/ARHHY",
-    "soybean": "https://gd.eppo.int/taxon/GLXMA",
-    "cassava": "https://gd.eppo.int/taxon/MANES",
-    "banana": "https://gd.eppo.int/taxon/MUBPA"
-}
+OVERWRITE = False
 
-pest_dict = {
-    "african bollworm": "https://gd.eppo.int/taxon/HELIAR",
-    "cassava green mite": "https://gd.eppo.int/taxon/MONOSE",
-    "soybean rust": "https://gd.eppo.int/taxon/PHAKIS",
-    "fall armyworm": "https://gd.eppo.int/taxon/LAPHFR",
-    "cutworm": "https://gd.eppo.int/taxon/SPODLI",
-    "maize stalk borer": "https://gd.eppo.int/taxon/BUSSFU",
-    "tuta absoluta": "https://gd.eppo.int/taxon/GNORAB"
-}
+CKAN_API_PATH = "https://ckan.madiphs.org/api/3/action/"
 
-update_frequency_dict = {
-    "infrequently/unscheduled": "http://voc.madiphs.org#c_d02399d1",
-    "daily": "http://voc.madiphs.org#c_98c125a4",
-    "weekly": "http://voc.madiphs.org#c_8548533c",
-    "monthly": "http://voc.madiphs.org#c_e26da0ba",
-    "quarterly": "http://voc.madiphs.org#c_e4d1137a",
-    "semi-annually": "http://voc.madiphs.org#c_d8dfabf4",
-    "annually": "http://voc.madiphs.org#c_1c97a174"
-}
+tag_pattern = r"[^a-zA-Z0-9\s\-_.]"
 
-owner_dict = {
-    "cab international": "cabi"
-}
-
-language_dict = {
-    "english": "eng",
-    "chichewa": "nya",
-    "swahili": "swa",
-    "french": "fra",
-    "german": "deu"
-}
-
-dataset_physical_format_dict = {
-    "electronic": "http://voc.madiphs.org#c_31e9a711",
-    "paper": "http://voc.madiphs.org#c_6807c50e"
-}
-
-country_code_dict = {
-    "malawi": "MWI",
-    "cameroon": "CMR",
-    "eswatini": "SWZ",
-    "ethiopia": "ETH",
-    "ghana": "GHA",
-    "kenya": "KEN",
-    "namibia": "NAM",
-    "nigeria":"NGA",
-    "rwanda":"RWA",
-    "south africa": "ZAF",
-    "south sudan": "SSD",
-    "tanzania": "TZA",
-    "uganda": "UGA",
-    "zambia": "ZMB",
-    "zimbabwe": "ZWE",
-    "africa": None
-}
-
-license_code_set = {
-    "notspecified",
-    "odc-pddl",
-    "odc-odbl",
-    "odc-by",
-    "cc-zero",
-    "cc-by",
-    "cc-by-sa",
-    "gfdl",
-    "other-open",
-    "other-pd",
-    "other-at",
-    "uk-ogl",
-    "cc-nc",
-    "other-nc",
-    "other-closed"
-}
 
 def slugify_title(title):
     return "".join(item for item in title.strip().lower().replace(" ","-") if item.isalnum() or item == "-")
@@ -130,10 +57,10 @@ def slugify_title(title):
 
 def get_tag_string(tag_input):
     # split 
-    tmp_tags = tag_input.split(",")
+    tmp_tags = tag_input.replace(";",",").split(",")
     trimmed_tags = []
     for tag in tmp_tags:
-        trimmed_tags.append(tag.strip())
+        trimmed_tags.append(re.sub(tag_pattern, "", tag.strip().replace("\n","")))
     return ",".join(trimmed_tags)
     #return tag_input.replace(" ", "+")
 
@@ -149,48 +76,82 @@ def get_fuzzy_date_safe(date_str):
         return parse(date_str)
     except ParserError as ex:
         return None
-    
-def get_geojson(country_codes):
-    filtered_geocountries = {"type": "FeatureCollection", "features":[]}
-    for country in geocountries["features"]:
-        if country["properties"]["ISO_A3"] in country_codes:
-            filtered_geocountries["features"].append(country)
-    return filtered_geocountries
 
-def import_row(row, row_idx, dry_run=False):
-    
+
+allowed_crops = skos_utils.get_concepts_in_scheme_with_lowercase_label_as_key(skos_utils.CROPS_SCHEME,"EN")
+allowed_pests = skos_utils.get_concepts_in_scheme_with_concept_as_key(skos_utils.PESTS_SCHEME,"EN")
+#print(crops)
+#exit()
+
+def get_countries_covered(spatial_2):
+    country_codes = []
+    if spatial_2 == "":
+        country_codes = africa_metadata.get_africa_country_codes()
+    else:    
+        country_names = [name.strip() for name in spatial_2.split(",")]
+        #print(country_names)
+        country_codes = africa_metadata.get_country_iso_codes(country_names)
+        #print(country_codes)
+        if len(country_codes) != len(country_names):
+            # Check for SSA (Sub-Saharan Africa, a super region)
+            if spatial_2.strip() == "SSA":
+                country_codes = africa_metadata.get_super_region_country_codes(spatial_2.strip())
+                #print(country_codes)
+            
+    return country_codes
+
+# Book keeping - checking for duplicats
+ids_in_import_dataset = []
+
+def validate_row(row, row_idx):
+    global ids_in_import_dataset
     # Get the dataset dictionary
     
     # TODO: validate mandatory input
     validated = True
     validation_messages = []
     # Title/name
-    dataset_name = slugify_title(row[2])
+    dataset_name = slugify_title(row["title"])
+    
+
     if len(dataset_name.strip()) == 0:
         validated = False
         validation_messages.append(f"This is not a valid title: \"{dataset_name}\"")
+
+    if dataset_name in ids_in_import_dataset:
+        validated = False
+        validation_messages.append(f"This title is a duplicate: {row["title"]}")
+    else:
+        ids_in_import_dataset.append(dataset_name)
+
     # Crop and pest
-    crop = crop_dict.get(row[0].strip().lower(), None)
+    crop = allowed_crops.get(row["crop"].strip().lower(), None)
     if crop is None:
         validated = False
-        validation_messages.append(f"We could not find this crop in our lists: \"{row[0]}\"")
-    pest = pest_dict.get(row[1].strip().lower(), None)
-    if pest is None:
-        validated = False
-        validation_messages.append(f"We could not find this pest in our lists: \"{row[1]}\"")
+        validation_messages.append(f"We could not find this crop in our lists: \"{row["crop"]}\"")
+    if len(row["EPPO_pest"].strip()) > 0:
+        pests = [pest.strip() for pest in row["EPPO_pest"].split(",")]
+        for pest in pests:
+            pest = allowed_pests.get(pest.strip(), None)
+            if pest is None:
+                validated = False
+                validation_messages.append(f"We could not find this pest in our lists: \"{row["pest"]}\"")
+    else:
+        pest = ""
     # Owner organization
-    owner_org = owner_dict.get(row[11].strip().lower(), None)
+    owner_org = metadata.owner_dict.get(row["owner_name"].strip().lower(), None)
     if owner_org is None:
         validated = False
-        validation_messages.append(f"We could not find this organization in our lists: \"{row[11].strip()}\"")
+        validation_messages.append(f"We could not find this organization in our lists: \"{row["owner_name"].strip()}\"")
+
     # License
-    license_id = row[25].strip().lower()
-    if license_id not in license_code_set:
+    license_id = row["license"].strip().lower()
+    if license_id not in metadata.license_dict:
         validated = False
         validation_messages.append("License with id = \"%s\" not found" % license_id)
 
     # URL
-    url = row[24].strip()
+    url = row["resource_link"].strip()
     if url != "":
         # Check that it's a proper URL 
         try:
@@ -199,85 +160,122 @@ def import_row(row, row_idx, dry_run=False):
             validated = False
             validation_messages.append(f"{url} is not a valid URL")
     
-    # Spatial
-    country_names = [x.strip() for x in row[22].split(",")]
-    #print(country_names)
-    try:
-        country_codes = [country_code_dict[country_name.lower()] for country_name in country_names]
-        spatial = json.dumps(get_geojson(country_codes))
-    except KeyError:
+    # Countries covered
+    spatial_2 = row["spatial_2"].strip()
+    countries_covered = get_countries_covered(spatial_2)
+    if len(countries_covered) == 0:
         validated = False
-        validation_messages.append(f"\"{row[22]}\" is not a valid list of country names")
+        validation_messages.append(f"{spatial_2} contains countries not found in our list of African countries")
 
     if not validated:
         validation_message_str = "\n* ".join(validation_messages)
         print(f"\n## There were validation errors with row {row_idx}:\n* {validation_message_str}" )
         return False
     
-    if dry_run:
-        return True
-    
+    return True
+
+existing_datasets = []
+
+def get_existing_datasets():
+    global existing_datasets
+    r = requests.get(
+        f"{CKAN_API_PATH}/package_list",
+        headers={'Authorization':api_key}
+    )
+    response = r.json()
+    if response["success"]:
+        existing_datasets = response["result"]
+    #print(existing_datasets)
+
+def import_row(row, row_idx, dry_run=True):
+    #print(row["title"])
+    dataset_name = slugify_title(row["title"])
+    crop = allowed_crops.get(row["crop"].strip().lower(), None)
+    if len(row["EPPO_pest"].strip()) > 0:
+        pests = pests = [pest.strip() for pest in row["EPPO_pest"].split(",")]
+    else:
+        pests = "000"
+
+    owner_org = metadata.owner_dict.get(row["owner_name"].strip().lower(), None)
+    license_id = row["license"].strip().lower()
+    url = row["resource_link"].strip()
+
     dataset_dict = { 
         "type": scheming_type,
         "name": dataset_name, # Mandatory
         "crop": crop,
-        "pest": pest,
-        "title": row[2].strip(),
-        "notes": get_description(row[3], row[13], row[27]),
-        "tag_string": get_tag_string(row[4]),
-        "maintainer_name": row[9],
-        "maintainer_email": row[10],
+        "pest": pests,
+        "title": row["title"].strip(),
+        "notes": get_description(row["description"], row["purpose"], row["other_information"]),
+        "tag_string": get_tag_string(row["keywords"]),
+        "author": row["creator_name"],
+        "author_email": row["creator_email"],
+        "maintainer": row["manager_name"],
+        "maintainer_email": row["manager_email"],
         "owner_org": owner_org, # Mandatory
-        "language": language_dict[row[14].strip().lower()],
-        "creation_date": get_fuzzy_date_safe(row[15]),
-        "update_frequency": update_frequency_dict.get(row[16].strip().lower(),None),
-        "most_recent_update": get_fuzzy_date_safe(row[17]),
-        "dataset_type": row[18],
-        "dataset_physical_format": dataset_physical_format_dict[row[19].strip().lower()],
-        "dataset_location": row[23],
-        "country_codes": country_codes,
-        "spatial": spatial,
+        "language": metadata.language_dict.get(row.get("language","").strip().lower(),"000"),
+        "creation_date": get_fuzzy_date_safe(row["creation_date"]),
+        "update_frequency": metadata.update_frequency_dict.get(row["update_frequency"].strip().lower(),metadata.update_frequency_dict["infrequently/unscheduled"]),
+        "most_recent_update": get_fuzzy_date_safe(row["most_recent_update"]),
+        "dataset_type": row["type_of_resource"],
+        "dataset_physical_format": metadata.dataset_physical_format_dict.get(row.get("format_1","").strip().lower(),""),
+        "dataset_location": row["location"],
+        "country_codes": get_countries_covered(row["spatial_2"]),
         "license_id": license_id
     } 
 
-
     resource_dict = {
         "package_id": dataset_name,
-        "url": row[24].strip(),
-        "name": row[2],
-        "format": row[20]
+        "url": url,
+        "name": row["title"],
+        "format": row["format_1"]
     }
 
-    print(dataset_dict)
+    if dry_run:
+        print(dataset_dict)
+        print("DRY RUN")
+        return
+    
+    
+    if dataset_name in existing_datasets:
+        if OVERWRITE:
+            # Delete the existing dataset before recreating it
+            r = requests.post(f"{CKAN_API_PATH}/dataset_purge",
+                data={"id":dataset_name},
+                headers={'Authorization':api_key}
+            )
+            print("Overwriting %s " % dataset_dict["title"])
+        else:
+            print(f"WARNING: Dataset with title \"{dataset_dict["title"]}\" already exists!")
     r = requests.post(
-        "https://ckan.madiphs.org/api/3/action/package_create",
+        f"{CKAN_API_PATH}/package_create",
         data=dataset_dict,
         headers={'Authorization':api_key}
     )
-    
     if r.status_code == 200:
         r2 = requests.post(
-            "https://ckan.madiphs.org/api/3/action/resource_create",
+            f"{CKAN_API_PATH}/resource_create",
             data=resource_dict,
             headers={'Authorization':api_key}
         )
-        print(r2.text)
     else:
-        print(r.text)
+        print("ERROR when trying to import row with title \"%s\": %s" % (dataset_dict["title"],r.text))
+        #exit(0)
+    #print(r.text)
 
 
-factsheets_path= os.getenv("FACTSHEETS_CSV_PATH")
-
-with open(factsheets_path) as csvfile:
-    reader = csv.reader(csvfile, delimiter=";", quotechar="\"")
+with open(f"{my_path}/tmp/factsheets.csv") as csvfile:
+    reader = csv.DictReader(csvfile, delimiter=";", quotechar="\"")
     all_rows_validated = True
+    all_rows=[]
     for row_idx, row in enumerate(reader):
-        if row[0] == "Crop":
-            continue
-        if not import_row(row, row_idx + 1, True):
+        all_rows.append(row)
+        if not validate_row(row, row_idx):
             all_rows_validated = False
     if all_rows_validated:
-        print("Next: import the data")
+        get_existing_datasets()
+        for row_idx, row in enumerate(all_rows):
+            import_row(row, row_idx, False)         
     else:
         print("There were validation errors with at least one dataset")
 

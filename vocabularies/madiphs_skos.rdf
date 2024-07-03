@@ -495,56 +495,6 @@ No additional restrictions — You may not apply legal terms or technological me
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://gd.eppo.int/taxon/commonpests">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-	<skos:prefLabel xml:lang="en">Common Pests</skos:prefLabel>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://gd.eppo.int/taxon/SPFRUG">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:definition xml:lang="en">A caterpillar that causes significant damage to maize and other crops in Malawi.</skos:definition>
-	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/commonpests"/>
-	<skos:prefLabel xml:lang="en">Spodoptera frugiperda</skos:prefLabel>
-	<skos:altLabel xml:lang="en">Fall Armyworm</skos:altLabel>
-	<skos:notation rdf:datatype="https://gd.eppo.int/taxon">SPFRUG</skos:notation>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://gd.eppo.int/taxon/HELIAR">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:definition xml:lang="en">A moth whose larvae feed on various crops including groundnuts, causing extensive damage.</skos:definition>
-	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/commonpests"/>
-	<skos:prefLabel xml:lang="en">Helicoverpa armigera</skos:prefLabel>
-	<skos:altLabel xml:lang="en">African Bollworm</skos:altLabel>
-	<skos:notation rdf:datatype="https://gd.eppo.int/taxon">HELIAR</skos:notation>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://gd.eppo.int/taxon/MONOSE">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:definition xml:lang="en">An invasive pest species that affects cassava plants by feeding on the leaves.</skos:definition>
-	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/commonpests"/>
-	<skos:prefLabel xml:lang="en">Mononychellus tanajoa</skos:prefLabel>
-	<skos:altLabel xml:lang="en">Cassava Green Mite</skos:altLabel>
-	<skos:notation rdf:datatype="https://gd.eppo.int/taxon">MONOSE</skos:notation>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://gd.eppo.int/taxon/SPODLI">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:definition xml:lang="en">A polyphagous pest that is known to feed on tobacco and many other crops.</skos:definition>
-	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/commonpests"/>
-	<skos:prefLabel xml:lang="en">Spodoptera litura</skos:prefLabel>
-	<skos:altLabel xml:lang="en">Tobacco Cutworm</skos:altLabel>
-	<skos:notation rdf:datatype="https://gd.eppo.int/taxon">SPODLI</skos:notation>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://gd.eppo.int/taxon/PHAKIS">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:definition xml:lang="en">A fungus that causes rust disease in soybeans, leading to defoliation and reduced yields.</skos:definition>
-	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/commonpests"/>
-	<skos:prefLabel xml:lang="en">Phakopsora pachyrhizi</skos:prefLabel>
-	<skos:altLabel xml:lang="en">Soybean Rust</skos:altLabel>
-	<skos:notation rdf:datatype="https://gd.eppo.int/taxon">PHAKIS</skos:notation>
-</rdf:Description>
-
 <rdf:Description rdf:about="http://voc.madiphs.org">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
 	<owl:imports rdf:resource="http://topbraid.org/schema/"/>
@@ -553,71 +503,6 @@ No additional restrictions — You may not apply legal terms or technological me
 <rdf:Description rdf:about="http://voc.madiphs.org#conceptScheme_a4cccdf1">
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
 	<skos:prefLabel xml:lang="en">UN Macro geographic regions</skos:prefLabel>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://voc.madiphs.org#c_1391">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:definition xml:lang="en">A starchy root crop, widely grown in tropical regions, used for food and flour.</skos:definition>
-	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
-	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
-	<skos:prefLabel xml:lang="en">Cassava</skos:prefLabel>
-	<skos:prefLabel xml:lang="ny">Chinangwa</skos:prefLabel>
-	<skos:notation rdf:datatype="https://gd.eppo.int">MANES</skos:notation>
-	<schema:image rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Manihot_esculenta_-_Köhler–s_Medizinal-Pflanzen-090.jpg/220px-Manihot_esculenta_-_Köhler–s_Medizinal-Pflanzen-090.jpg"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://voc.madiphs.org#c_3483">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:definition xml:lang="en">A legume crop known for its edible seeds, often used in cooking and for oil.</skos:definition>
-	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
-	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
-	<skos:prefLabel xml:lang="en">Groundnut</skos:prefLabel>
-	<skos:prefLabel xml:lang="ny">Njugu</skos:prefLabel>
-	<skos:prefLabel xml:lang="ny">Mtedza</skos:prefLabel>
-	<skos:notation rdf:datatype="https://gd.eppo.int">ARACX</skos:notation>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://voc.madiphs.org#c_7657">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:definition xml:lang="en">A widely cultivated red or green fruit, used extensively in cooking.</skos:definition>
-	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
-	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
-	<skos:prefLabel xml:lang="en">Tomato</skos:prefLabel>
-	<skos:prefLabel xml:lang="ny">Tomato</skos:prefLabel>
-	<skos:notation rdf:datatype="https://gd.eppo.int">SOLLY</skos:notation>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://voc.madiphs.org#c_12332">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:definition xml:lang="en">A cereal grain first domesticated in Southern Mexico, a staple food globally.</skos:definition>
-	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
-	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
-	<skos:prefLabel xml:lang="en">Maize</skos:prefLabel>
-	<skos:prefLabel xml:lang="ny">Chimanga</skos:prefLabel>
-	<skos:altLabel xml:lang="en-US">Corn</skos:altLabel>
-	<skos:notation rdf:datatype="https://gd.eppo.int">ZEAMX</skos:notation>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://voc.madiphs.org#c_14477">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:definition xml:lang="en">A species of legume native to East Asia, widely grown for its edible bean.</skos:definition>
-	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
-	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
-	<skos:prefLabel xml:lang="en">Soybean</skos:prefLabel>
-	<skos:prefLabel xml:lang="ny">Soja</skos:prefLabel>
-	<skos:prefLabel xml:lang="ny">Soya</skos:prefLabel>
-	<skos:notation rdf:datatype="https://gd.eppo.int">GLYMX</skos:notation>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://voc.madiphs.org#c_850">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:definition xml:lang="en">A long curved fruit that grows in clusters and has soft pulpy flesh and yellow skin when ripe.</skos:definition>
-	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
-	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
-	<skos:prefLabel xml:lang="en">Banana</skos:prefLabel>
-	<skos:prefLabel xml:lang="ny">Thonde</skos:prefLabel>
-	<skos:prefLabel xml:lang="ny">Bananazi</skos:prefLabel>
-	<skos:notation rdf:datatype="https://gd.eppo.int">MUSAA</skos:notation>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://voc.madiphs.org#conceptScheme_62afa144">
@@ -818,6 +703,278 @@ No additional restrictions — You may not apply legal terms or technological me
 	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_909f7bbb"/>
 	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_909f7bbb"/>
 	<skos:prefLabel xml:lang="en">Not sure</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/LAPHFR">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Fall Armyworm</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/BBTV00">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Banana Bunchy Top Virus</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/COSMSO">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Banana Corn Weeviil</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_37c84fd7">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Maize Lethal Necrosis</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/FUSACB">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Banana Fusarium Wilt</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/BEMITA">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">White flies</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/MONNTA">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Green mite</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/1GEMIF">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Cassava Mosaic Virus Disease (CVMD)</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/CBSAV0">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Cassava Brown Streak Disease (CBSD)</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/GRV000">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Groundnut Rosette</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/ACMV00">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Cassava Mosaic Disease</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/ASPEFL">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Aspergillus flavus</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/AKTVO">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Alectra vogelii</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/APHICR">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Groundnut aphid</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/MSV000">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Maize streak virus</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/CERCZM">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Grey leaf spot</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/CHILZO">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Sorghum stem borer</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/STRHE">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Striga</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/PUCCPY">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Maize rust</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/PUCCSO">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Common rust of maize</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/BUSSFU">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Maize stem borer</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/LAPHEX">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">African Armyworm</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/GNORAB">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Tomato Leaf Miner (Tuta absoluta)</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/LIRISA">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Vegetable Leaf Miner</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/TETREV">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Red Spider Mite</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/RALSSL">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Bacterial Wilt</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/PHYTIN">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Late Blight</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/ALTESO">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Early Blight</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/1MELGG">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:topConceptOf rdf:resource="https://gd.eppo.int/taxon/pest"/>
+	<skos:prefLabel xml:lang="en">Root knot nematodes (Meloidogyne spp.)</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/pest">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="en">Common pests</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/MUBPA">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A long curved fruit that grows in clusters and has soft pulpy flesh and yellow skin when ripe.</skos:definition>
+	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:prefLabel xml:lang="en">Banana</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Thonde</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Bananazi</skos:prefLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int">MUSAA</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/MANES">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A starchy root crop, widely grown in tropical regions, used for food and flour.</skos:definition>
+	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:prefLabel xml:lang="en">Cassava</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Chinangwa</skos:prefLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int">MANES</skos:notation>
+	<schema:image rdf:resource="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Manihot_esculenta_-_Köhler–s_Medizinal-Pflanzen-090.jpg/220px-Manihot_esculenta_-_Köhler–s_Medizinal-Pflanzen-090.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/ARHHY">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A legume crop known for its edible seeds, often used in cooking and for oil.</skos:definition>
+	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:prefLabel xml:lang="en">Groundnut</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Njugu</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Mtedza</skos:prefLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int">ARACX</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/ZEAMX">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A cereal grain first domesticated in Southern Mexico, a staple food globally.</skos:definition>
+	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:prefLabel xml:lang="en">Maize</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Chimanga</skos:prefLabel>
+	<skos:altLabel xml:lang="en-US">Corn</skos:altLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int">ZEAMX</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/GLXMA">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A species of legume native to East Asia, widely grown for its edible bean.</skos:definition>
+	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:prefLabel xml:lang="en">Soybean</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Soja</skos:prefLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int">GLYMX</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://gd.eppo.int/taxon/LYPES">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:definition xml:lang="en">A widely cultivated red or green fruit, used extensively in cooking.</skos:definition>
+	<skos:inScheme rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:topConceptOf rdf:resource="https://rd.madiphs.net/scheme/common-crops"/>
+	<skos:prefLabel xml:lang="en">Tomato</skos:prefLabel>
+	<skos:prefLabel xml:lang="ny">Tomato</skos:prefLabel>
+	<skos:notation rdf:datatype="https://gd.eppo.int">SOLLY</skos:notation>
 </rdf:Description>
 
 </rdf:RDF>
