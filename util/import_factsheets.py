@@ -67,9 +67,9 @@ def get_tag_string(tag_input):
 
 def get_description(description, purpose, other):
     if len(purpose.strip()) > 0:
-        description = description + f"\n\nPURPOSE: {purpose}"
+        description = description + f"\n\n### Purpose\n {purpose}"
     if len(other.strip()) > 0:
-        description = description + f"\n\nOTHER INFORMATION: {other}"
+        description = description + f"\n\n### Other information\n {other}"
     return description
 
 def get_fuzzy_date_safe(date_str):
