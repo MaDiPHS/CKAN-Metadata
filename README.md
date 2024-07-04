@@ -7,7 +7,19 @@ for [MaDiPHS](https://madiphs.org) located at [https://ckan.madiphs.org/](https:
 
 ## ckanext-scheming
 To create records for MaDiPHS datasets and factsheets, we have used the [ckanext-scheming](https://github.com/ckan/ckanext-scheming) 
-extension and added the factsheets-schema.yaml definition. 
+extension and added the `factsheets-schema.yaml` and `datasets-schema.yaml` definitions. Please note that these schemas use the 
+`display_snippets` property, e.g. like this:
+
+```yaml
+- field_name: country_codes
+  label: Countries covered
+  preset: multiple_select
+  display_snippet: madiphstheming_country_codes.html
+  choices:
+ ```
+
+ In this case, the `madiphstheming_country_codes.html` refers to [this file](https://github.com/MaDiPHS/ckanext-madiphstheming/blob/main/ckanext/madiphstheming/templates/scheming/display_snippets/madiphstheming_country_codes.html) in the [ckanext-madiphsteming repository](https://github.com/MaDiPHS/ckanext-madiphstheming).
+
 
 
 ## vocabularies
