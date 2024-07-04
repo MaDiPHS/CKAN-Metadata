@@ -220,7 +220,6 @@ def import_row(row, row_idx, dry_run=True):
         "most_recent_update": get_fuzzy_date_safe(row["most_recent_update"]),
         "dataset_type": row["type_of_resource"],
         "dataset_physical_format": metadata.dataset_physical_format_dict.get(row.get("format_1","").strip().lower(),""),
-        "dataset_location": row["location"],
         "country_codes": get_countries_covered(row["spatial_2"]),
         "license_id": license_id
     } 
