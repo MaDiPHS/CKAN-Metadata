@@ -156,6 +156,7 @@ dataset_fields:
 - field_name: country_codes
   label: Countries covered
   preset: multiple_select
+  display_snippet: madiphstheming_country_codes.html
   choices:
   - value: DZA
     label: Algeria
