@@ -2,3 +2,4 @@
 venv/
 util/validation.md
 util/tmp/
+util/__pycache__/*
