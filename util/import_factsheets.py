@@ -44,7 +44,8 @@ api_key=os.getenv("CKAN_API_KEY")
 # ckanext-scheming dataset type
 scheming_type = "plant-health-knowledge-product"
 
-OVERWRITE = False
+# If set to True, existing datasets will be overwritten by this import
+OVERWRITE = True
 
 CKAN_API_PATH = "https://ckan.madiphs.org/api/3/action/"
 
@@ -228,7 +229,7 @@ def import_row(row, row_idx, dry_run=True):
         "package_id": dataset_name,
         "url": url,
         "name": row["title"],
-        "format": row["format_1"]
+        "format": row["format_2"]
     }
 
     if dry_run:
