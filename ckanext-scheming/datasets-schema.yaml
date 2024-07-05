@@ -42,6 +42,116 @@ dataset_fields:
   preset: tag_string_autocomplete
   form_placeholder: eg. agriculture, pesticide, IPM
 
+# Vocabulary: EPPO codes (https://gd.eppo.int)
+- field_name: crop
+  label: Crop
+  preset: multiple_select
+  form_include_blank_choice: true
+  choices:
+    - value: https://gd.eppo.int/taxon/ZEAMX
+      label: Maize
+    - value: https://gd.eppo.int/taxon/LYPES
+      label: Tomato
+    - value: https://gd.eppo.int/taxon/ARHHY
+      label: Groundnut
+    - value: https://gd.eppo.int/taxon/GLXMA
+      label: Soybean
+    - value: https://gd.eppo.int/taxon/MANES
+      label: Cassava
+    - value: https://gd.eppo.int/taxon/MUBPA
+      label: Banana
+  required: true
+
+# Vocabulary: EPPO codes (https://gd.eppo.int)
+- field_name: pest
+  label: Pest
+  preset: multiple_select
+  form_include_blank_choice: true
+  required: true
+  choices:
+    # Maize
+    - value: https://gd.eppo.int/taxon/HELIAR
+      label: African Bollworm
+    - value: https://gd.eppo.int/taxon/BUSSFU
+      label: Maize stem borer
+    - value: https://gd.eppo.int/taxon/LAPHEX
+      label: African armyworm
+    - value: https://gd.eppo.int/taxon/LAPHFR
+      label: Fall Armyworm
+    - value: https://gd.eppo.int/taxon/BUSSFU
+      label: Maize Stalk Borer
+    - value: https://gd.eppo.int/taxon/MSV000
+      label: Maize streak virus
+    - value: https://gd.eppo.int/taxon/PUCCPY
+      label: Maize rust (Puccinia polysora)
+    - value: https://gd.eppo.int/taxon/PUCCSO
+      label: Common rust of maize (Puccinia sorghi)
+    - value: https://gd.eppo.int/taxon/CERCZM
+      label: Maize grey leaf spot
+    - value: https://gd.eppo.int/taxon/STRHE
+      label: Striga
+    - value: http://voc.madiphs.org#c_37c84fd7
+      label: Maize lethal necrosis
+
+    # Tomato
+    - value: https://gd.eppo.int/taxon/GNORAB
+      label: Tomato leaf miner (Tuta absoluta)
+    - value: https://gd.eppo.int/taxon/PHYTIN
+      label: Late blight of potato/tomato
+    - value: https://gd.eppo.int/taxon/ALTESO
+      label: Early blight (Alternaria)
+    - value: https://gd.eppo.int/taxon/LIRISA
+      label: Vegetable leaf miner (Liriomyza sativae)
+    - value: https://gd.eppo.int/taxon/TETREV
+      label: Red spider mite
+    - value: https://gd.eppo.int/taxon/TETRUR
+      label: Two-spotted red spider mite
+    - value: https://gd.eppo.int/taxon/RALSSL
+      label: Bacterial wilt
+    - value: https://gd.eppo.int/taxon/1MELGG
+      label: Root-knot nematodes
+    
+    # Cassava
+    - value: https://gd.eppo.int/taxon/MONOSE
+      label: Cassava Green Mite
+    - value: https://gd.eppo.int/taxon/MONNTA
+      label: Cassava green mite
+    - value: https://gd.eppo.int/taxon/BEMITA
+      label: Silverleaf whitefly
+    - value: https://gd.eppo.int/taxon/CBSAV0
+      label: Cassava brown streak virus
+    - value: https://gd.eppo.int/taxon/1GEMIF
+      label: Cassava mosaic virus disease
+
+    
+    # Banana
+    - value: https://gd.eppo.int/taxon/COSMSO
+      label: Banana borer weevil
+    - value: https://gd.eppo.int/taxon/BBTV00
+      label: Banana bunchy top virus
+    - value: https://gd.eppo.int/taxon/FUSACB
+      label: Banana fusarium wilt
+    
+    # Groundnut
+    - value: https://gd.eppo.int/taxon/APHICR
+      label: Groundnut aphid
+    - value: https://gd.eppo.int/taxon/GRV000
+      label: Groundnut rosette disease
+    - value: https://gd.eppo.int/taxon/ASPEFL
+      label: Aspergillus flavus
+    - value: https://gd.eppo.int/taxon/AKTVO
+      label: Alectra vogelii
+    
+    
+    # Other
+    - value: https://gd.eppo.int/taxon/PHAKIS
+      label: Soybean Rust
+    - value: https://gd.eppo.int/taxon/SPODLI
+      label: Cutworm
+
+    - value: "000"
+      label: "Unknown"
+      
 - field_name: reference_number
   label: Reference number
   form_placeholder: e.g. ABC/12345/556677889
