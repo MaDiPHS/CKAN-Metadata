@@ -72,9 +72,9 @@ def create_user(
     else:
         print("Error: %s" % r.text)
     
-user_list = get_user_list()
-print("Number of users: %s" % len(user_list["result"]))
-user_ids_to_delete=[]
+#user_list = get_user_list()
+#print("Number of users: %s" % len(user_list["result"]))
+#user_ids_to_delete=[]
 #for user in user_list["result"]:
 #    if user["number_created_packages"] == 0 and user["id"] not in ["55b8de6e-279b-4e90-9f37-6b8cde68e4be:"]:
 #        user_ids_to_delete.append(user["id"])
@@ -82,7 +82,13 @@ user_ids_to_delete=[]
 #delete_users(user_ids_to_delete)
 
 #create_user("foobar","foo@bar.com","ACME Foobar","123PassXXX")
+"""
+users = [
+    {"name":"foobar-user", "email": "foo@bar.org", "fullname":"Foobar User","password":"XXX"},
 
+]
 
-    
-
+for user in users:
+    create_user(user["name"],user["email"],user["fullname"],user["password"])
+ 
+"""
