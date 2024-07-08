@@ -60,7 +60,7 @@ dataset_fields:
       label: Cassava
     - value: https://gd.eppo.int/taxon/MUBPA
       label: Banana
-  required: true
+  required: false
 
 # Vocabulary: EPPO codes (https://gd.eppo.int)
 - field_name: pest
