@@ -23,6 +23,7 @@
 
 import json
 import pprint
+import os
 import re
 import csv
 from dateutil.parser import parse, ParserError
@@ -30,6 +31,9 @@ import requests
 import validators
 from dotenv import load_dotenv
 import africa_metadata, metadata, skos_utils
+from pathlib import Path
+
+my_path = Path( __file__ ).parent.absolute()
 
 # This example was found here: https://docs.ckan.org/en/2.9/api/#example-importing-datasets-with-the-ckan-api
 
@@ -40,7 +44,7 @@ load_dotenv()
 api_key=os.getenv("CKAN_API_KEY")
 
 # ckanext-scheming dataset type
-scheming_type = "plant-health-knowledge-product"
+scheming_type = "plant-health-dataset"
 
 OVERWRITE = True
 
@@ -125,10 +129,13 @@ def validate_row(row, row_idx):
         ids_in_import_dataset.append(dataset_name)
 
     # Crop and pest
-    crop = allowed_crops.get(row["crop"].strip().lower(), None)
-    if crop is None:
-        validated = False
-        validation_messages.append(f"We could not find this crop in our lists: \"{row["crop"]}\"")
+    if len(row["crop"].strip()) > 0:
+        crops = [crop.strip().lower() for crop in row["crop"].split(",")]
+        for crop in crops:
+            crop = allowed_crops.get(crop, None)
+            if crop is None:
+                validated = False
+                validation_messages.append(f"We could not find this crop in our lists: \"{row["crop"]}\"")
     if len(row["EPPO_pest"].strip()) > 0:
         pests = [pest.strip() for pest in row["EPPO_pest"].split(",")]
         for pest in pests:
@@ -168,28 +175,16 @@ def validate_row(row, row_idx):
         validation_messages.append(f"{spatial_2} contains countries not found in our list of African countries")
     
     # Georeference
-    record_georeferenced = metadata.georeference_dict.get(row["record_georeferenced"].strip(), None)
-    if record_georeferenced is None:
-        record_georeferenced = False
-        validation_messages.append(f"This record_georeferenced code is not valid: \"{row["record_georeferenced"].strip()}\"")
-
+    record_georeferenced = metadata.georeference_dict.get(row["record_georeferenced"].strip(), "http://voc.madiphs.org#c_874d5d55")
+    
     # Update frequency
-    update_frequency = metadata.update_frequency_dict.get(row["update_frequency"].strip().lower(), None)
-    if update_frequency is None:
-        validated = False
-        validation_messages.append(f"This update frequency is not valid: \"{row["update_frequency"].strip()}\"")
+    update_frequency = metadata.update_frequency_dict.get(row["update_frequency"].strip().lower(), metadata.update_frequency_dict["infrequently/unscheduled"])
     
     # Timestamp recording
-    record_timestamp = metadata.record_timestamp_dict.get(row["record_timestamp"].strip().lower(), None)
-    if record_timestamp is None:
-        validated = False
-        validation_messages.append(f"This record timestamp code is not valid: \"{row["record_timestamp"].strip()}\"")
-
+    record_timestamp = metadata.record_timestamp_dict.get(row["record_timestamp"].strip().lower(), "http://voc.madiphs.org#c_a3a8e068")
+    
     # Privacy
-    privacy = metadata.privacy_dict.get(row["privacy"].strip().lower(), None)
-    if privacy is None:
-        validated = False
-        validation_messages.append(f"This privacy code is not valid: \"{row["privacy"].strip()}\"")
+    privacy = metadata.privacy_dict.get(row["privacy"].strip().lower(), "http://voc.madiphs.org#c_4581d1c6")
 
     if not validated:
         validation_message_str = "\n* ".join(validation_messages)
@@ -222,7 +217,7 @@ def import_row(row, row_idx, dry_run=True):
 
     owner_org = metadata.owner_dict.get(row["owner_name"].strip().lower(), None)
     license_id = row["license"].strip().lower()
-    url = row["resource_link"].strip()
+    url = row["article_link"].strip()
 
     dataset_dict = { 
         "type": scheming_type,
@@ -247,7 +242,7 @@ def import_row(row, row_idx, dry_run=True):
         "spatial_resolution": row["spatial_resolution"].strip(),
         "temporal_resolution": row["temporal_resolution"].strip(),
         "record_georeferenced": metadata.georeference_dict.get(row["record_georeferenced"].strip(), None),
-        "record_timestamp": metadata.record_timestamp_dict.get(row["record"].strip().lower(), None),
+        "record_timestamp": metadata.record_timestamp_dict.get(row["record_timestamp"].strip().lower(), None),
         "privacy": metadata.privacy_dict.get(row["privacy"].strip().lower, None),
         "country_codes": get_countries_covered(row["spatial_2"]),
         "license_id": license_id
@@ -257,7 +252,7 @@ def import_row(row, row_idx, dry_run=True):
         "package_id": dataset_name,
         "url": url,
         "name": row["title"],
-        "format": row["format_1"]
+        "format": row["format_2"]
     }
 
     if dry_run:
@@ -293,7 +288,7 @@ def import_row(row, row_idx, dry_run=True):
     #print(r.text)
 
 
-with open("datasets.csv") as csvfile:
+with open(f"{my_path}/tmp/datasets.csv") as csvfile:
     reader = csv.DictReader(csvfile, delimiter=";", quotechar="\"")
     all_rows_validated = True
     all_rows=[]

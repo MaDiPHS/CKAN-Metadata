@@ -63,13 +63,20 @@ owner_dict = {
     "dccms": "dccms",
     "iita": "iita",
     "plant village": "plantvillage",
+    "plantvillage": "plantvillage",
     "icipe": "icipe",
     "usaid": "usaid",
     "fao": "fao",
     "sawbo": "sawbo",
     "daes": "daes",
     "icrisat": "icrisat",
-    "cimmyt": "cimmyt"
+    "cimmyt": "cimmyt",
+    "total land care": "total-land-care",
+    "nso": "nso",
+    "dars":"dars",
+    "daps":"daps",
+    "luanar":"luanar",
+    "dcd":"dcd"
 }
 
 language_dict = {
