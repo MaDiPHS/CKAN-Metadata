@@ -59,7 +59,6 @@ dataset_fields:
 # Vocabulary: EPPO codes (https://gd.eppo.int)
 - field_name: pest
   label: Pest
-  preset: multiple_select
   form_include_blank_choice: true
   required: true
   choices:
@@ -145,7 +144,29 @@ dataset_fields:
 
     - value: "000"
       label: "Unknown"
-      
+
+- field_name: information_subject_categories
+  label: Information subject categories
+  choices:
+    - value: http://voc.madiphs.org#c_cb042b84
+      label: Biology
+    - value: http://voc.madiphs.org#c_4a30845a
+      label: Identification
+    - value: http://voc.madiphs.org#c_0dfdaf11
+      label: Prevention
+    - value: http://voc.madiphs.org#c_39965b7c
+      label: Treatment
+
+- field_name: media_types
+  label: Media types
+  choices:
+    - value: http://voc.madiphs.org#c_3fe9f2f5
+      label: Audio
+    - value: http://voc.madiphs.org#c_754af88f
+      label: Text
+    - value: http://voc.madiphs.org#c_8a3539b5
+      label: Video
+
 # Vocabulary: Using ISO 693-2 (https://en.wikipedia.org/wiki/ISO_639-2)
 - field_name: language
   label: Language
