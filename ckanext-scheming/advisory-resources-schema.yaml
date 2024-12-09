@@ -146,8 +146,8 @@ dataset_fields:
     - value: "000"
       label: "Unknown"
 
-- field_name: information_subject_categories
-  label: Information subject categories
+- field_name: information_subject_category
+  label: Information subject category
   preset: select
   choices:
     - value: http://voc.madiphs.org#c_cb042b84
@@ -159,8 +159,8 @@ dataset_fields:
     - value: http://voc.madiphs.org#c_39965b7c
       label: Treatment
 
-- field_name: media_types
-  label: Media types
+- field_name: media_type
+  label: Media type
   preset: select
   choices:
     - value: http://voc.madiphs.org#c_3fe9f2f5
