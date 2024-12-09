@@ -59,6 +59,7 @@ dataset_fields:
 # Vocabulary: EPPO codes (https://gd.eppo.int)
 - field_name: pest
   label: Pest
+  preset: select
   form_include_blank_choice: true
   required: true
   choices:
@@ -147,6 +148,7 @@ dataset_fields:
 
 - field_name: information_subject_categories
   label: Information subject categories
+  preset: select
   choices:
     - value: http://voc.madiphs.org#c_cb042b84
       label: Biology
@@ -159,6 +161,7 @@ dataset_fields:
 
 - field_name: media_types
   label: Media types
+  preset: select
   choices:
     - value: http://voc.madiphs.org#c_3fe9f2f5
       label: Audio
