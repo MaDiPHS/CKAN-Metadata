@@ -39,7 +39,7 @@ dataset_fields:
 # Vocabulary: EPPO codes (https://gd.eppo.int)
 - field_name: crop
   label: Crop
-  preset: multiple_select
+  preset: select
   form_include_blank_choice: true
   choices:
     - value: https://gd.eppo.int/taxon/ZEAMX
