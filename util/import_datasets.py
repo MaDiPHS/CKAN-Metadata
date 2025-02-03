@@ -256,7 +256,8 @@ def import_row(row, row_idx, dry_run=True):
     }
 
     if dry_run:
-        print(dataset_dict)
+        #print(json.dump(dataset_dict))
+        print(json.dumps(dataset_dict, default=str))
         print("DRY RUN")
         return
     
@@ -299,7 +300,7 @@ with open(f"{my_path}/tmp/datasets.csv") as csvfile:
     if all_rows_validated:
         get_existing_datasets()
         for row_idx, row in enumerate(all_rows):
-            import_row(row, row_idx, False)         
+            import_row(row, row_idx, True)         
     else:
         print("There were validation errors with at least one dataset")
 
