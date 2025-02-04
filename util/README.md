@@ -5,7 +5,8 @@ The general method of submitting datasets using CKAN's API is:
 1. Create an API key for a user having admin privileges in the organization in question.
 ![Screenshot of where to add your API key](./add_api_key_illus.png)
 2. Read and understand [the general documentation for importing datasets](https://docs.ckan.org/en/2.9/api/#example-importing-datasets-with-the-ckan-api)
-3. Add the schema specific dataset properties as part of the request. See examples for plant-health-dataset and plant-health-knowledge-product (respectively) below. Full Python examples for posting data can be found in `./import_datasets.py` and `import_factsheets.py`
+3. Add the schema specific dataset properties as part of the request. See examples for plant-health-dataset and plant-health-knowledge-product (respectively) 
+below. Full Python examples for posting data can be found in `./import_datasets.py` and `./import_factsheets.py`
 
 ```json
 {
