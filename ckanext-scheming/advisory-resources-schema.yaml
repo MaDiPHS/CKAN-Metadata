@@ -41,7 +41,7 @@ dataset_fields:
   label: Crop
   preset: select
   form_include_blank_choice: true
-  required: true
+  required: false
   choices:
     - value: https://gd.eppo.int/taxon/ZEAMX
       label: Maize
@@ -55,7 +55,6 @@ dataset_fields:
       label: Cassava
     - value: https://gd.eppo.int/taxon/MUBPA
       label: Banana
-  required: false
 
 # Vocabulary: EPPO codes (https://gd.eppo.int)
 - field_name: pest
@@ -155,6 +154,8 @@ dataset_fields:
       label: Biology
     - value: http://voc.madiphs.org#c_4a30845a
       label: Identification
+    - value: http://voc.madiphs.org#c_2fff5c20
+      label: Symptoms
     - value: http://voc.madiphs.org#c_0dfdaf11
       label: Prevention
     - value: http://voc.madiphs.org#c_39965b7c
