@@ -150,14 +150,12 @@ dataset_fields:
   label: Information subject category
   preset: select
   choices:
-    - value: http://voc.madiphs.org#c_cb042b84
-      label: Biology
     - value: http://voc.madiphs.org#c_4a30845a
       label: Identification
     - value: http://voc.madiphs.org#c_2fff5c20
       label: Symptoms
     - value: http://voc.madiphs.org#c_0dfdaf11
-      label: Prevention
+      label: Management and Control
     - value: http://voc.madiphs.org#c_39965b7c
       label: Treatment
 
