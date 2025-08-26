@@ -150,6 +150,8 @@ dataset_fields:
   label: Information subject category
   preset: select
   choices:
+    - value: http://voc.madiphs.org#c_8f96be84
+      label: All subjects
     - value: http://voc.madiphs.org#c_4a30845a
       label: Identification
     - value: http://voc.madiphs.org#c_2fff5c20
