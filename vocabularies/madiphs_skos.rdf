@@ -594,7 +594,7 @@ No additional restrictions — You may not apply legal terms or technological me
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
 	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
 	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
-	<skos:prefLabel xml:lang="en">Data records are inclulded, ALL records include spatial information, records are NOT georeferenced</skos:prefLabel>
+	<skos:prefLabel xml:lang="en">Data records are included, ALL records include spatial information, records are NOT georeferenced</skos:prefLabel>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://voc.madiphs.org#c_cb970135">
@@ -975,6 +975,67 @@ No additional restrictions — You may not apply legal terms or technological me
 	<skos:prefLabel xml:lang="en">Tomato</skos:prefLabel>
 	<skos:prefLabel xml:lang="ny">Tomato</skos:prefLabel>
 	<skos:notation rdf:datatype="https://gd.eppo.int">SOLLY</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_df3474ed">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_9e2cfdfa"/>
+	<skos:prefLabel xml:lang="en">Data records ARE INCLUDED, SOME records include spatial information, records are NOT georeferenced</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_5c3c0589">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_62afa144"/>
+	<skos:prefLabel xml:lang="en">Hourly</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_4a30845a">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_f01d3949"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_f01d3949"/>
+	<skos:prefLabel xml:lang="en">Identification</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#conceptScheme_f01d3949">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<skos:prefLabel xml:lang="en">Information subject categories</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_cb042b84">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_f01d3949"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_f01d3949"/>
+	<skos:prefLabel xml:lang="en">Biology</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_39965b7c">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_f01d3949"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_f01d3949"/>
+	<skos:prefLabel xml:lang="en">Treatment</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_0dfdaf11">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_f01d3949"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_f01d3949"/>
+	<skos:prefLabel xml:lang="en">Prevention</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_2fff5c20">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_f01d3949"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_f01d3949"/>
+	<skos:prefLabel xml:lang="en">Symptoms</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://voc.madiphs.org#c_8f96be84">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://voc.madiphs.org#conceptScheme_f01d3949"/>
+	<skos:topConceptOf rdf:resource="http://voc.madiphs.org#conceptScheme_f01d3949"/>
+	<skos:prefLabel xml:lang="en">All subjects</skos:prefLabel>
 </rdf:Description>
 
 </rdf:RDF>
