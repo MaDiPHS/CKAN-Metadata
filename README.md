@@ -43,6 +43,7 @@ For each problem, advice may fall into these categories ("Information subject ca
 * Pest symptoms/visual injury
 * Pest management and control
 * Pest spraying
+
 ...or optionally
 * All subjects
 
